@@ -1,0 +1,319 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 1100" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="mp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05020C" />
+      <stop offset="50%" stop-color="#0E0820" />
+      <stop offset="100%" stop-color="#04020A" />
+    </linearGradient>
+
+    <pattern id="mp-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#251242" stroke-width="0.5" stroke-opacity="0.3" />
+    </pattern>
+
+    <style>
+      @keyframes pulseDot {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.4; }
+      }
+      .live-dot { animation: pulseDot 2s infinite ease-in-out; }
+    </style>
+  </defs>
+
+  <!-- Frame: Flat top, rounded bottom -->
+  <path d="M 0 0 L 480 0 L 480 1086 Q 480 1100 466 1100 L 14 1100 Q 0 1100 0 1086 Z" fill="url(#mp-bg)" stroke="#2B144E" stroke-width="1.8" />
+  <path d="M 0 0 L 480 0 L 480 1086 Q 480 1100 466 1100 L 14 1100 Q 0 1100 0 1086 Z" fill="url(#mp-grid)" />
+
+  <!-- HEADER -->
+  <g transform="translate(20, 26)">
+    <text font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#FBBF24" letter-spacing="1">
+      CORE EXPERTISE · WHAT I BUILD &amp; SHIP
+    </text>
+    <line x1="-10" y1="14" x2="450" y2="14" stroke="#251642" stroke-width="1.2" />
+  </g>
+
+  <!-- ================= 4 STACKED PILLAR CARDS ================= -->
+
+  <!-- CARD 1: THE BRAIN -->
+  <g transform="translate(20, 48)">
+    <rect width="440" height="245" rx="8" fill="#080414" stroke="#A855F7" stroke-width="1.2" />
+    
+    <!-- Title & Badges -->
+    <text x="18" y="32" font-family="'Inter', sans-serif" font-size="17" font-weight="900" fill="#FFFFFF">
+      🧠 THE BRAIN
+    </text>
+
+    <!-- Difficulty Badge -->
+    <g transform="translate(142, 17)">
+      <rect width="68" height="18" fill="#241434" />
+      <text x="5" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#94A3B8">DIFFICULTY</text>
+      <rect x="68" y="0" width="94" height="18" fill="#9333EA" />
+      <text x="74" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#FFFFFF">UNREASONABLE</text>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(330, 17)">
+      <rect width="92" height="18" rx="9" fill="#170B2A" stroke="#A855F7" stroke-width="0.8" />
+      <circle cx="10" cy="9" r="3" fill="#C084FC" class="live-dot" />
+      <text x="18" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#E9D5FF">FINE-TUNED</text>
+    </g>
+
+    <!-- Subtitle -->
+    <text x="18" y="62" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="800" fill="#00F0FF">
+      LLMs, Fine-Tuning &amp; Cognitive Architecture
+    </text>
+
+    <!-- Description -->
+    <g transform="translate(18, 84)" font-family="'JetBrains Mono', monospace" font-size="10.8" fill="#94A3B8">
+      <text y="0">Custom adaptation: <tspan fill="#F8FAFC" font-weight="700">LoRA, QLoRA, SFT &amp; DPO</tspan> alignment.</text>
+      <text y="18">Multi-agent loops, stateful graphs &amp; beyond <tspan fill="#F8FAFC" font-weight="700">if/else</tspan>.</text>
+      <text y="36">High-throughput quantized inference for reasoning.</text>
+    </g>
+
+    <!-- Tech Badges -->
+    <g transform="translate(18, 138)">
+      <rect x="0" y="0" width="86" height="20" rx="3" fill="#150A28" stroke="#3B1C66" stroke-width="0.8" />
+      <text x="7" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#D8B4FE">LoRA/QLoRA</text>
+
+      <rect x="92" y="0" width="76" height="20" rx="3" fill="#150A28" stroke="#3B1C66" stroke-width="0.8" />
+      <text x="99" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#D8B4FE">SFT &amp; DPO</text>
+
+      <rect x="174" y="0" width="82" height="20" rx="3" fill="#150A28" stroke="#3B1C66" stroke-width="0.8" />
+      <text x="181" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#D8B4FE">LangGraph</text>
+
+      <rect x="262" y="0" width="68" height="20" rx="3" fill="#150A28" stroke="#3B1C66" stroke-width="0.8" />
+      <text x="269" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#D8B4FE">vLLM</text>
+
+      <rect x="336" y="0" width="84" height="20" rx="3" fill="#150A28" stroke="#3B1C66" stroke-width="0.8" />
+      <text x="343" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#D8B4FE">Hybrid RAG</text>
+    </g>
+
+    <line x1="18" y1="172" x2="422" y2="172" stroke="#21103A" stroke-width="1" />
+
+    <!-- Quest & Specs -->
+    <g transform="translate(18, 192)">
+      <rect width="160" height="26" rx="4" fill="#16092E" stroke="#A855F7" stroke-width="0.9" />
+      <text x="12" y="17" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#E9D5FF">
+        QUEST: MAKE IT THINK
+      </text>
+      <text x="404" y="12" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#A855F7">
+        EVALS: &gt;94% ACC
+      </text>
+      <text x="404" y="24" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748B">
+        WEIGHTS: QUANTIZED
+      </text>
+    </g>
+  </g>
+
+  <!-- CARD 2: THE VOICE -->
+  <g transform="translate(20, 308)">
+    <rect width="440" height="245" rx="8" fill="#080414" stroke="#00F0FF" stroke-width="1.2" />
+    
+    <!-- Title & Badges -->
+    <text x="18" y="32" font-family="'Inter', sans-serif" font-size="17" font-weight="900" fill="#FFFFFF">
+      🎙️ THE VOICE
+    </text>
+
+    <!-- Difficulty Badge -->
+    <g transform="translate(142, 17)">
+      <rect width="68" height="18" fill="#142434" />
+      <text x="5" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#94A3B8">DIFFICULTY</text>
+      <rect x="68" y="0" width="105" height="18" fill="#0284C7" />
+      <text x="74" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#FFFFFF">WHY IS IT LAGGING</text>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(340, 17)">
+      <rect width="82" height="18" rx="9" fill="#091A2A" stroke="#00F0FF" stroke-width="0.8" />
+      <circle cx="10" cy="9" r="3" fill="#38BDF8" class="live-dot" />
+      <text x="18" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#BAE6FD">&lt;100MS</text>
+    </g>
+
+    <!-- Subtitle -->
+    <text x="18" y="62" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="800" fill="#39FF14">
+      Real-Time Voice AI &amp; Neural Audio
+    </text>
+
+    <!-- Description -->
+    <g transform="translate(18, 84)" font-family="'JetBrains Mono', monospace" font-size="10.8" fill="#94A3B8">
+      <text y="0">Sub-100ms conversational turn-around &amp; duplex audio.</text>
+      <text y="18">Full-duplex WebRTC streaming, neural TTS &amp; whisper STT.</text>
+      <text y="36">Waiting 3 seconds for a reply is a personality flaw.</text>
+    </g>
+
+    <!-- Tech Badges -->
+    <g transform="translate(18, 138)">
+      <rect x="0" y="0" width="100" height="20" rx="3" fill="#071824" stroke="#0F3852" stroke-width="0.8" />
+      <text x="7" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#7DD3FC">WebRTC/LiveKit</text>
+
+      <rect x="106" y="0" width="90" height="20" rx="3" fill="#071824" stroke="#0F3852" stroke-width="0.8" />
+      <text x="113" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#7DD3FC">Streaming TTS</text>
+
+      <rect x="202" y="0" width="76" height="20" rx="3" fill="#071824" stroke="#0F3852" stroke-width="0.8" />
+      <text x="209" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#7DD3FC">Whisper STT</text>
+
+      <rect x="284" y="0" width="80" height="20" rx="3" fill="#071824" stroke="#0F3852" stroke-width="0.8" />
+      <text x="291" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#7DD3FC">Barge-in VAD</text>
+
+      <rect x="370" y="0" width="52" height="20" rx="3" fill="#071824" stroke="#0F3852" stroke-width="0.8" />
+      <text x="377" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#7DD3FC">PyAudio</text>
+    </g>
+
+    <line x1="18" y1="172" x2="422" y2="172" stroke="#0B2538" stroke-width="1" />
+
+    <!-- Quest & Specs -->
+    <g transform="translate(18, 192)">
+      <rect width="155" height="26" rx="4" fill="#0A1828" stroke="#00F0FF" stroke-width="0.9" />
+      <text x="12" y="17" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#00F0FF">
+        QUEST: MAKE IT TALK
+      </text>
+      <text x="404" y="12" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#00F0FF">
+        STREAM: E2E DUPLEX
+      </text>
+      <text x="404" y="24" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748B">
+        LATENCY: &lt;120MS
+      </text>
+    </g>
+  </g>
+
+  <!-- CARD 3: THE MACHINE (ABOVE THE LAB) -->
+  <g transform="translate(20, 568)">
+    <rect width="440" height="245" rx="8" fill="#080414" stroke="#F59E0B" stroke-width="1.2" />
+    
+    <!-- Title & Badges -->
+    <text x="18" y="32" font-family="'Inter', sans-serif" font-size="17" font-weight="900" fill="#FFFFFF">
+      ⚙️ THE MACHINE
+    </text>
+
+    <!-- Difficulty Badge -->
+    <g transform="translate(142, 17)">
+      <rect width="68" height="18" fill="#2E1C0A" />
+      <text x="5" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#94A3B8">DIFFICULTY</text>
+      <rect x="68" y="0" width="130" height="18" fill="#D97706" />
+      <text x="74" y="13" font-family="'JetBrains Mono', monospace" font-size="7.5" font-weight="800" fill="#FFFFFF">IT WORKS ON MY MACHINE</text>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(348, 17)">
+      <rect width="74" height="18" rx="9" fill="#241406" stroke="#F59E0B" stroke-width="0.8" />
+      <circle cx="10" cy="9" r="3" fill="#FBBF24" class="live-dot" />
+      <text x="18" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#FDE68A">SHIPPED</text>
+    </g>
+
+    <!-- Subtitle -->
+    <text x="18" y="62" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="800" fill="#FB923C">
+      APIs, Cloud &amp; Production Infrastructure
+    </text>
+
+    <!-- Description -->
+    <g transform="translate(18, 84)" font-family="'JetBrains Mono', monospace" font-size="10.8" fill="#94A3B8">
+      <text y="0">Scales from zero to 100K+ concurrent requests.</text>
+      <text y="18">GPU serving clusters, low-latency caches &amp; queues.</text>
+      <text y="36">17 moving parts pretending to be one deterministic engine.</text>
+    </g>
+
+    <!-- Tech Badges -->
+    <g transform="translate(18, 138)">
+      <rect x="0" y="0" width="82" height="20" rx="3" fill="#221204" stroke="#4D2808" stroke-width="0.8" />
+      <text x="7" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#FCD34D">FastAPI / Go</text>
+
+      <rect x="88" y="0" width="80" height="20" rx="3" fill="#221204" stroke="#4D2808" stroke-width="0.8" />
+      <text x="95" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#FCD34D">Kubernetes</text>
+
+      <rect x="174" y="0" width="76" height="20" rx="3" fill="#221204" stroke="#4D2808" stroke-width="0.8" />
+      <text x="181" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#FCD34D">GPU Serving</text>
+
+      <rect x="256" y="0" width="74" height="20" rx="3" fill="#221204" stroke="#4D2808" stroke-width="0.8" />
+      <text x="263" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#FCD34D">Postgres/pg</text>
+
+      <rect x="336" y="0" width="84" height="20" rx="3" fill="#221204" stroke="#4D2808" stroke-width="0.8" />
+      <text x="343" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#FCD34D">Redis PubSub</text>
+    </g>
+
+    <line x1="18" y1="172" x2="422" y2="172" stroke="#331A05" stroke-width="1" />
+
+    <!-- Quest & Specs -->
+    <g transform="translate(18, 192)">
+      <rect width="165" height="26" rx="4" fill="#241406" stroke="#F59E0B" stroke-width="0.9" />
+      <text x="12" y="17" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#FBBF24">
+        QUEST: SHIP THE THING
+      </text>
+      <text x="404" y="12" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#F59E0B">
+        UPTIME: 99.98%
+      </text>
+      <text x="404" y="24" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748B">
+        P99 LATENCY: &lt;45MS
+      </text>
+    </g>
+  </g>
+
+  <!-- CARD 4: THE LAB (DIRECTLY UNDER THE MACHINE) -->
+  <g transform="translate(20, 828)">
+    <rect width="440" height="245" rx="8" fill="#080414" stroke="#39FF14" stroke-width="1.2" />
+    
+    <!-- Title & Badges -->
+    <text x="18" y="32" font-family="'Inter', sans-serif" font-size="17" font-weight="900" fill="#FFFFFF">
+      🧪 THE LAB
+    </text>
+
+    <!-- Difficulty Badge -->
+    <g transform="translate(142, 17)">
+      <rect width="68" height="18" fill="#142C1E" />
+      <text x="5" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#94A3B8">DIFFICULTY</text>
+      <rect x="68" y="0" width="80" height="18" fill="#16A34A" />
+      <text x="74" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#FFFFFF">UNDEFINED</text>
+    </g>
+
+    <!-- Status Chip -->
+    <g transform="translate(335, 17)">
+      <rect width="88" height="18" rx="9" fill="#0B2014" stroke="#39FF14" stroke-width="0.8" />
+      <circle cx="10" cy="9" r="3" fill="#4ADE80" class="live-dot" />
+      <text x="18" y="13" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="700" fill="#BBF7D0">EXPLORING</text>
+    </g>
+
+    <!-- Subtitle -->
+    <text x="18" y="62" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="800" fill="#FACC15">
+      Autonomous Swarms &amp; 0-to-1 R&amp;D
+    </text>
+
+    <!-- Description -->
+    <g transform="translate(18, 84)" font-family="'JetBrains Mono', monospace" font-size="10.8" fill="#94A3B8">
+      <text y="0">Untested research turned into market defensibility.</text>
+      <text y="18">Self-correcting sandboxes, agent swarms &amp; edge AI.</text>
+      <text y="36">The occasional discovery that changes everything.</text>
+    </g>
+
+    <!-- Tech Badges -->
+    <g transform="translate(18, 138)">
+      <rect x="0" y="0" width="84" height="20" rx="3" fill="#0A1C10" stroke="#144222" stroke-width="0.8" />
+      <text x="7" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#86EFAC">Agent Swarms</text>
+
+      <rect x="90" y="0" width="80" height="20" rx="3" fill="#0A1C10" stroke="#144222" stroke-width="0.8" />
+      <text x="97" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#86EFAC">Code Sandbox</text>
+
+      <rect x="176" y="0" width="82" height="20" rx="3" fill="#0A1C10" stroke="#144222" stroke-width="0.8" />
+      <text x="183" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#86EFAC">Edge Devices</text>
+
+      <rect x="264" y="0" width="84" height="20" rx="3" fill="#0A1C10" stroke="#144222" stroke-width="0.8" />
+      <text x="271" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#86EFAC">Multimodal AI</text>
+
+      <rect x="354" y="0" width="66" height="20" rx="3" fill="#0A1C10" stroke="#144222" stroke-width="0.8" />
+      <text x="361" y="14" font-family="'JetBrains Mono', monospace" font-size="8.8" fill="#86EFAC">Rapid MVP</text>
+    </g>
+
+    <line x1="18" y1="172" x2="422" y2="172" stroke="#14331C" stroke-width="1" />
+
+    <!-- Quest & Specs -->
+    <g transform="translate(18, 192)">
+      <rect width="190" height="26" rx="4" fill="#0A2014" stroke="#39FF14" stroke-width="0.9" />
+      <text x="12" y="17" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#39FF14">
+        QUEST: BREAK THE PATTERN
+      </text>
+      <text x="404" y="12" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#39FF14">
+        STAGE: SKUNKWORKS
+      </text>
+      <text x="404" y="24" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748B">
+        VELOCITY: ULTRA
+      </text>
+    </g>
+  </g>
+</svg>

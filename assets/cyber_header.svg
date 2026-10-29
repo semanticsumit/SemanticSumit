@@ -1,0 +1,388 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05050A" />
+      <stop offset="40%" stop-color="#0B0914" />
+      <stop offset="80%" stop-color="#120A21" />
+      <stop offset="100%" stop-color="#05050A" />
+    </linearGradient>
+
+    <!-- Cyberpunk Neon Gradients -->
+    <linearGradient id="neon-cyan-purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <linearGradient id="accent-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#7928CA" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="line-laser" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00F0FF" stop-opacity="1" />
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="ultra-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur2" />
+      <feGaussianBlur stdDeviation="3" result="blur1" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2D124D" stroke-width="0.8" stroke-opacity="0.35" />
+      <circle cx="40" cy="40" r="1" fill="#A855F7" fill-opacity="0.5" />
+    </pattern>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" width="100%" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="#000000" stroke-width="1.5" stroke-opacity="0.35" />
+    </pattern>
+
+    <style>
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.8; filter: drop-shadow(0 0 6px #00F0FF); }
+        50% { opacity: 0.4; filter: drop-shadow(0 0 1px #00F0FF); }
+      }
+      @keyframes matrixFlicker {
+        0%, 100% { opacity: 0.95; }
+        23% { opacity: 0.95; }
+        24% { opacity: 0.5; }
+        26% { opacity: 0.95; }
+        71% { opacity: 0.95; }
+        72% { opacity: 0.2; }
+        73% { opacity: 0.95; }
+      }
+      @keyframes scanBeam {
+        0% { transform: translateY(-40px); opacity: 0; }
+        15% { opacity: 0.8; }
+        85% { opacity: 0.8; }
+        100% { transform: translateY(440px); opacity: 0; }
+      }
+      @keyframes typeLine1 {
+        0%, 5% { opacity: 0; }
+        10%, 100% { opacity: 1; }
+      }
+      @keyframes typeLine2 {
+        0%, 25% { opacity: 0; }
+        30%, 100% { opacity: 1; }
+      }
+      @keyframes typeLine3 {
+        0%, 50% { opacity: 0; }
+        55%, 100% { opacity: 1; }
+      }
+      @keyframes typeLine4 {
+        0%, 75% { opacity: 0; }
+        80%, 100% { opacity: 1; }
+      }
+      @keyframes cursorBlink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes orbitSpin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes waveBar {
+        0%, 100% { height: 8px; }
+        50% { height: 32px; }
+      }
+      @keyframes dataStream {
+        0% { stroke-dashoffset: 200; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      .radar-arm {
+        transform-origin: 1070px 105px;
+        animation: radarSweep 4s linear infinite;
+      }
+      .scan-beam {
+        animation: scanBeam 6s ease-in-out infinite;
+      }
+      .cursor {
+        animation: cursorBlink 0.9s infinite;
+      }
+      .ring-spin-fast {
+        transform-origin: 1070px 105px;
+        animation: orbitSpin 8s linear infinite;
+      }
+      .ring-spin-rev {
+        transform-origin: 1070px 105px;
+        animation: orbitSpin 14s linear infinite reverse;
+      }
+      .node-pulse {
+        animation: pulseGlow 2.5s infinite;
+      }
+      .glitch-text {
+        animation: matrixFlicker 5s infinite;
+      }
+      .data-stream {
+        stroke-dasharray: 10, 8;
+        animation: dataStream 2s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base Canvas -->
+  <rect width="1200" height="440" rx="14" fill="url(#bg-grad)" stroke="#26123D" stroke-width="1.5" />
+  
+  <!-- Cyberpunk Matrix Grid Background -->
+  <rect width="1200" height="440" rx="14" fill="url(#cyber-grid)" />
+
+  <!-- Perspective Floor Grid Illusion -->
+  <g opacity="0.3" transform="translate(0, 240)">
+    <line x1="0" y1="200" x2="600" y2="40" stroke="#7928CA" stroke-width="0.8" />
+    <line x1="200" y1="200" x2="600" y2="40" stroke="#7928CA" stroke-width="0.8" />
+    <line x1="400" y1="200" x2="600" y2="40" stroke="#7928CA" stroke-width="0.8" />
+    <line x1="800" y1="200" x2="600" y2="40" stroke="#7928CA" stroke-width="0.8" />
+    <line x1="1000" y1="200" x2="600" y2="40" stroke="#7928CA" stroke-width="0.8" />
+    <line x1="1200" y1="200" x2="600" y2="40" stroke="#7928CA" stroke-width="0.8" />
+    <ellipse cx="600" cy="180" rx="450" ry="25" fill="none" stroke="#A855F7" stroke-width="0.7" stroke-dasharray="6,4" />
+    <ellipse cx="600" cy="140" rx="320" ry="18" fill="none" stroke="#00F0FF" stroke-width="0.7" stroke-dasharray="4,4" />
+  </g>
+
+  <!-- Ambient Glowing Orbs -->
+  <circle cx="150" cy="90" r="140" fill="#7928CA" opacity="0.18" filter="url(#ultra-glow)" />
+  <circle cx="1070" cy="110" r="120" fill="#00F0FF" opacity="0.14" filter="url(#ultra-glow)" />
+  <circle cx="600" cy="220" r="180" fill="#EC4899" opacity="0.08" filter="url(#ultra-glow)" />
+
+  <!-- Laser Horizon Separator -->
+  <line x1="40" y1="46" x2="1160" y2="46" stroke="url(#line-laser)" stroke-width="1.2" />
+
+  <!-- TOP SYSTEM HUD BAR -->
+  <g transform="translate(48, 30)">
+    <!-- Terminal status icons -->
+    <circle cx="4" cy="0" r="4.5" fill="#EF4444" />
+    <circle cx="20" cy="0" r="4.5" fill="#F59E0B" />
+    <circle cx="36" cy="0" r="4.5" fill="#10B981" />
+
+    <text x="60" y="4" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" font-weight="700" fill="#00F0FF" letter-spacing="1.5">
+      SEMANTIC_OS // v4.2.0-STABLE
+    </text>
+
+    <text x="320" y="4" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" fill="#A855F7" letter-spacing="1">
+      [SYS_ARCH: NEURAL_CORTEX]
+    </text>
+    <text x="560" y="4" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" fill="#00F0FF" letter-spacing="1">
+      [STREAMING_VOICE: ONLINE]
+    </text>
+    <text x="780" y="4" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" fill="#39FF14" letter-spacing="1">
+      ● SUB-100ms PIPELINE
+    </text>
+    <text x="980" y="4" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" fill="#E2E8F0" letter-spacing="1">
+      LAT: 28.61° N // LON: 77.20° E
+    </text>
+  </g>
+
+  <!-- HUD CORNER BRACKETS -->
+  <g stroke="#00F0FF" stroke-width="2" fill="none" opacity="0.85">
+    <!-- Top-Left -->
+    <path d="M 24 40 L 24 24 L 40 24" />
+    <!-- Top-Right -->
+    <path d="M 1176 40 L 1176 24 L 1160 24" />
+    <!-- Bottom-Left -->
+    <path d="M 24 400 L 24 416 L 40 416" />
+    <!-- Bottom-Right -->
+    <path d="M 1176 400 L 1176 416 L 1160 416" />
+  </g>
+
+  <!-- Decorative Crosshairs & Guides -->
+  <g stroke="#A855F7" stroke-width="0.8" opacity="0.6">
+    <line x1="20" y1="220" x2="30" y2="220" />
+    <line x1="25" y1="215" x2="25" y2="225" />
+    <line x1="1170" y1="220" x2="1180" y2="220" />
+    <line x1="1175" y1="215" x2="1175" y2="225" />
+  </g>
+
+  <!-- MAIN IDENTITY TITLE AREA -->
+  <g transform="translate(60, 85)">
+    <!-- Small Cyber Eyebrow -->
+    <g transform="translate(0, 16)">
+      <rect x="0" y="-12" width="138" height="20" rx="3" fill="#180C2E" stroke="#7928CA" stroke-width="1" />
+      <text x="8" y="2" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="10" font-weight="700" fill="#39FF14" letter-spacing="1.2">
+        ⚡ PROTOCOL // 0x7F
+      </text>
+      <text x="150" y="2" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" fill="#94A3B8" letter-spacing="2">
+        AUTHORIZATION: ROOT_OVERRIDE
+      </text>
+    </g>
+
+    <!-- Main Name Title with Glitch / Neon -->
+    <g transform="translate(0, 68)" class="glitch-text">
+      <!-- Shadow Glow -->
+      <text x="2" y="2" font-family="'Inter', 'Segoe UI', -apple-system, sans-serif" font-size="54" font-weight="900" fill="#7928CA" opacity="0.7" letter-spacing="3">
+        SEMANTIC SUMIT
+      </text>
+      <!-- Gradient Fill -->
+      <text x="0" y="0" font-family="'Inter', 'Segoe UI', -apple-system, sans-serif" font-size="54" font-weight="900" fill="url(#neon-cyan-purple)" filter="url(#neon-glow)" letter-spacing="3">
+        SEMANTIC SUMIT
+      </text>
+    </g>
+
+    <!-- High-Impact Tagline -->
+    <g transform="translate(4, 102)">
+      <text font-family="'JetBrains Mono', 'Courier New', monospace" font-size="16" font-weight="600" fill="#F8FAFC" letter-spacing="1">
+        BUILDING SOFTWARE COMPUTERS WEREN'T EXPLICITLY INVITED TO RUN.
+      </text>
+    </g>
+
+    <g transform="translate(4, 126)">
+      <text font-family="'JetBrains Mono', 'Courier New', monospace" font-size="12" fill="#94A3B8" letter-spacing="1">
+        Voice AI Engineer · Autonomous Agent Architect · Sub-100ms Latency Obsessive
+      </text>
+    </g>
+
+    <!-- Interactive Badges Row Inside Header -->
+    <g transform="translate(4, 150)">
+      <!-- Badge 1: Voice AI Core -->
+      <rect x="0" y="0" width="145" height="26" rx="5" fill="#0C0A1D" stroke="#00F0FF" stroke-width="1" />
+      <circle cx="12" cy="13" r="3.5" fill="#00F0FF" class="node-pulse" />
+      <text x="24" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#00F0FF">VOICE_AI: S-TIER</text>
+
+      <!-- Badge 2: LLM Agents -->
+      <rect x="155" y="0" width="165" height="26" rx="5" fill="#0C0A1D" stroke="#A855F7" stroke-width="1" />
+      <circle cx="167" cy="13" r="3.5" fill="#A855F7" class="node-pulse" />
+      <text x="179" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#D8B4FE">LLM_AGENTS: ACTIVE</text>
+
+      <!-- Badge 3: 3 AM Breakthroughs -->
+      <rect x="330" y="0" width="180" height="26" rx="5" fill="#0C0A1D" stroke="#EC4899" stroke-width="1" />
+      <circle cx="342" cy="13" r="3.5" fill="#EC4899" class="node-pulse" />
+      <text x="354" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#F472B6">3AM_CHAOS: 99.8%</text>
+
+      <!-- Badge 4: Production Ready -->
+      <rect x="520" y="0" width="145" height="26" rx="5" fill="#0C0A1D" stroke="#10B981" stroke-width="1" />
+      <circle cx="532" cy="13" r="3.5" fill="#10B981" class="node-pulse" />
+      <text x="544" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#34D399">SHIPPED: TRUE</text>
+    </g>
+  </g>
+
+  <!-- LIVE CODING TERMINAL WINDOW (EMBEDDED IN SVG) -->
+  <g transform="translate(60, 275)">
+    <!-- Terminal Chassis -->
+    <rect width="660" height="135" rx="8" fill="#080711" stroke="#2B1A4A" stroke-width="1.2" />
+    
+    <!-- Terminal Header Bar -->
+    <rect width="660" height="26" rx="8" fill="#110B22" />
+    <path d="M 0 20 L 0 26 L 660 26 L 660 20 Z" fill="#110B22" />
+    <line x1="0" y1="26" x2="660" y2="26" stroke="#2B1A4A" stroke-width="0.8" />
+    
+    <!-- Terminal Buttons -->
+    <circle cx="16" cy="13" r="3.5" fill="#EF4444" opacity="0.8" />
+    <circle cx="28" cy="13" r="3.5" fill="#F59E0B" opacity="0.8" />
+    <circle cx="40" cy="13" r="3.5" fill="#10B981" opacity="0.8" />
+    <text x="56" y="17" font-family="'JetBrains Mono', monospace" font-size="10" fill="#71717A">terminal.bash — 80x24</text>
+    
+    <!-- Code Lines Animated -->
+    <g transform="translate(18, 48)" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11.5">
+      <!-- Line 1 -->
+      <g style="animation: typeLine1 8s infinite;">
+        <text x="0" y="0" fill="#39FF14" font-weight="700">sumit@neural-cortex:~$</text>
+        <text x="180" y="0" fill="#F8FAFC">./start_streaming_voice_agent.sh --target=production</text>
+      </g>
+
+      <!-- Line 2 -->
+      <g style="animation: typeLine2 8s infinite;" transform="translate(0, 20)">
+        <text x="0" y="0" fill="#00F0FF">[INFO]</text>
+        <text x="52" y="0" fill="#94A3B8">Audio buffer synchronized: WebRTC Opus stream connected (48kHz stereo)</text>
+      </g>
+
+      <!-- Line 3 -->
+      <g style="animation: typeLine3 8s infinite;" transform="translate(0, 40)">
+        <text x="0" y="0" fill="#A855F7">[PIPELINE]</text>
+        <text x="76" y="0" fill="#E2E8F0">STT: 38ms | LLM-TTFT: 42ms | Streaming-TTS: 18ms | Total: 98ms</text>
+      </g>
+
+      <!-- Line 4 -->
+      <g style="animation: typeLine4 8s infinite;" transform="translate(0, 60)">
+        <text x="0" y="0" fill="#39FF14">✓ AGENT READY:</text>
+        <text x="110" y="0" fill="#FACC15">"Don't just use the system. Question the system. Then build something wild."</text>
+        <rect x="620" y="-10" width="8" height="13" fill="#00F0FF" class="cursor" />
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT SIDE: HOLOGRAPHIC QUANTUM RADAR & SYSTEM CORE -->
+  <g transform="translate(950, 75)">
+    <!-- Radar Chassis Background -->
+    <rect x="-90" y="-15" width="280" height="335" rx="10" fill="#090714" stroke="#2D1A4A" stroke-width="1.2" />
+    <text x="-75" y="6" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#00F0FF" letter-spacing="1.5">
+      QUANTUM_HUD // TELEMETRY
+    </text>
+    <line x1="-90" y1="16" x2="190" y2="16" stroke="#2D1A4A" stroke-width="0.8" />
+
+    <!-- Radar Center at (50, 105) -->
+    <g transform="translate(50, 105)">
+      <!-- Outer Target Rings -->
+      <circle cx="0" cy="0" r="82" fill="none" stroke="#2E1B4E" stroke-width="1" />
+      <circle cx="0" cy="0" r="62" fill="none" stroke="#3B1D66" stroke-width="1" stroke-dasharray="4,4" />
+      <circle cx="0" cy="0" r="42" fill="none" stroke="#00F0FF" stroke-width="0.8" opacity="0.4" />
+      <circle cx="0" cy="0" r="22" fill="#130826" stroke="#A855F7" stroke-width="1.2" />
+
+      <!-- Crosshairs -->
+      <line x1="-86" y1="0" x2="86" y2="0" stroke="#7928CA" stroke-width="0.7" opacity="0.6" />
+      <line x1="0" y1="-86" x2="0" y2="86" stroke="#7928CA" stroke-width="0.7" opacity="0.6" />
+
+      <!-- Rotating Ring with Dash Array -->
+      <circle cx="0" cy="0" r="72" fill="none" stroke="#00F0FF" stroke-width="2" stroke-dasharray="25, 60, 40, 20" class="ring-spin-fast" opacity="0.7" />
+      <circle cx="0" cy="0" r="52" fill="none" stroke="#EC4899" stroke-width="1.5" stroke-dasharray="15, 30, 45, 15" class="ring-spin-rev" opacity="0.6" />
+
+      <!-- Radar Sweep Arm -->
+      <g class="radar-arm" transform-origin="0 0">
+        <line x1="0" y1="0" x2="0" y2="-82" stroke="#00F0FF" stroke-width="2" filter="url(#neon-glow)" />
+        <path d="M 0 0 L 30 -76 A 82 82 0 0 0 0 -82 Z" fill="url(#accent-glow)" />
+      </g>
+
+      <!-- Center Neural Core Dot -->
+      <circle cx="0" cy="0" r="6" fill="#00F0FF" class="node-pulse" />
+      <circle cx="0" cy="0" r="2" fill="#FFFFFF" />
+
+      <!-- Detected Target Blips -->
+      <circle cx="35" cy="-28" r="3.5" fill="#39FF14" class="node-pulse" />
+      <circle cx="-42" cy="38" r="3" fill="#EC4899" class="node-pulse" />
+      <circle cx="20" cy="50" r="2.5" fill="#00F0FF" class="node-pulse" />
+    </g>
+
+    <!-- Radar Telemetry Readout Below -->
+    <g transform="translate(-75, 222)" font-family="'JetBrains Mono', monospace" font-size="10.5">
+      <text x="0" y="0" fill="#94A3B8">CORE_LOAD:</text>
+      <text x="140" y="0" fill="#39FF14" font-weight="700">99.4% OC</text>
+
+      <text x="0" y="18" fill="#94A3B8">STREAM_LATENCY:</text>
+      <text x="140" y="18" fill="#00F0FF" font-weight="700">~98 ms</text>
+
+      <text x="0" y="36" fill="#94A3B8">COFFEE_RESERVE:</text>
+      <text x="140" y="36" fill="#F59E0B" font-weight="700">CRITICAL</text>
+
+      <text x="0" y="54" fill="#94A3B8">NEURAL_AGENTS:</text>
+      <text x="140" y="54" fill="#A855F7" font-weight="700">SYNCHRONIZED</text>
+
+      <text x="0" y="72" fill="#94A3B8">LIMITS_ACCEPTED:</text>
+      <text x="140" y="72" fill="#EF4444" font-weight="700">NONE [0/0]</text>
+    </g>
+  </g>
+
+  <!-- CRT SCANLINE & SWEEP OVERLAY -->
+  <rect width="1200" height="440" fill="url(#scanlines)" pointer-events="none" opacity="0.65" />
+  <rect width="1200" height="40" fill="url(#line-laser)" opacity="0.15" class="scan-beam" pointer-events="none" />
+</svg>

@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 660" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="mob-bg-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05020D" />
+      <stop offset="50%" stop-color="#0E071F" />
+      <stop offset="100%" stop-color="#05020C" />
+    </linearGradient>
+
+    <filter id="m-glow-2">
+      <feGaussianBlur stdDeviation="3" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <pattern id="m-scope-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#052E16" stroke-width="0.7" />
+    </pattern>
+
+    <style>
+      @keyframes osciScroll { 0% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -350; } }
+      @keyframes vuL { 0%, 100% { height: 14px; } 35% { height: 50px; } 75% { height: 28px; } }
+      @keyframes vuR { 0%, 100% { height: 32px; } 45% { height: 18px; } 85% { height: 58px; } }
+      @keyframes arrowPulse { 0%, 100% { opacity: 0.9; } 50% { opacity: 0.3; } }
+
+      .m-wave { stroke-dasharray: 450; animation: osciScroll 2.8s linear infinite; }
+      .vu-bar-l { animation: vuL 0.75s infinite; }
+      .vu-bar-r { animation: vuR 0.85s infinite; }
+      .down-arrow { animation: arrowPulse 1.2s infinite; }
+    </style>
+  </defs>
+
+  <!-- Frame: Flat top and bottom -->
+  <rect width="480" height="660" fill="url(#mob-bg-2)" stroke="#2B144E" stroke-width="1.8" />
+
+  <!-- HEADER -->
+  <g transform="translate(20, 26)">
+    <circle cx="0" cy="0" r="4.5" fill="#00F0FF" />
+    <text x="14" y="4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#00F0FF" letter-spacing="1">
+      VOICE AI STREAMING PIPELINE
+    </text>
+    <text x="320" y="4" font-family="'JetBrains Mono', monospace" font-size="10" fill="#39FF14">
+      ● 48kHz OPUS
+    </text>
+    <line x1="-10" y1="14" x2="450" y2="14" stroke="#251642" stroke-width="1.2" />
+  </g>
+
+  <!-- ================= 4 VERTICAL PIPELINE CARDS ================= -->
+  <!-- Node 1: Ingest -->
+  <g transform="translate(20, 50)">
+    <rect width="440" height="68" rx="8" fill="#090516" stroke="#00F0FF" stroke-width="1.2" />
+    <rect width="440" height="20" rx="8" fill="#120A28" />
+    <path d="M 0 14 L 0 20 L 440 20 L 440 14 Z" fill="#120A28" />
+    <text x="12" y="14" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#00F0FF">01 // WEBRTC AUDIO INGEST</text>
+    
+    <text x="12" y="40" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#F8FAFC">Opus 48kHz Full-Duplex Stream</text>
+    <text x="12" y="56" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8">Zero-buffer chunk receiver</text>
+    
+    <rect x="330" y="32" width="98" height="20" rx="3" fill="#052E16" />
+    <text x="342" y="46" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#39FF14">INGEST ~12ms</text>
+  </g>
+
+  <!-- Laser Arrow 1 -->
+  <g transform="translate(240, 126)" fill="#00F0FF" class="down-arrow">
+    <polygon points="0,8 -5,0 5,0" />
+  </g>
+
+  <!-- Node 2: STT -->
+  <g transform="translate(20, 138)">
+    <rect width="440" height="68" rx="8" fill="#090516" stroke="#3B82F6" stroke-width="1.2" />
+    <rect width="440" height="20" rx="8" fill="#0E1234" />
+    <path d="M 0 14 L 0 20 L 440 20 L 440 14 Z" fill="#0E1234" />
+    <text x="12" y="14" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#60A5FA">02 // STREAMING STT CORE</text>
+    
+    <text x="12" y="40" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#F8FAFC">Streaming Whisper / VAD</text>
+    <text x="12" y="56" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8">Sub-millisecond token emitter</text>
+    
+    <rect x="330" y="32" width="98" height="20" rx="3" fill="#172554" />
+    <text x="348" y="46" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#60A5FA">TTFT ~32ms</text>
+  </g>
+
+  <!-- Laser Arrow 2 -->
+  <g transform="translate(240, 214)" fill="#3B82F6" class="down-arrow">
+    <polygon points="0,8 -5,0 5,0" />
+  </g>
+
+  <!-- Node 3: LLM -->
+  <g transform="translate(20, 226)">
+    <rect width="440" height="68" rx="8" fill="#090516" stroke="#A855F7" stroke-width="1.2" />
+    <rect width="440" height="20" rx="8" fill="#1C0D34" />
+    <path d="M 0 14 L 0 20 L 440 20 L 440 14 Z" fill="#1C0D34" />
+    <text x="12" y="14" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#D8B4FE">03 // COGNITIVE REASONING AGENT</text>
+    
+    <text x="12" y="40" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#F8FAFC">Low-Latency Turn-Taking LLM</text>
+    <text x="12" y="56" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8">Dynamic RAG &amp; Tool Calling</text>
+    
+    <rect x="330" y="32" width="98" height="20" rx="3" fill="#3B0764" />
+    <text x="348" y="46" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#D8B4FE">LLM ~38ms</text>
+  </g>
+
+  <!-- Laser Arrow 3 -->
+  <g transform="translate(240, 302)" fill="#A855F7" class="down-arrow">
+    <polygon points="0,8 -5,0 5,0" />
+  </g>
+
+  <!-- Node 4: Maya-1 TTS -->
+  <g transform="translate(20, 314)">
+    <rect width="440" height="68" rx="8" fill="#090516" stroke="#EC4899" stroke-width="1.2" />
+    <rect width="440" height="20" rx="8" fill="#280B22" />
+    <path d="M 0 14 L 0 20 L 440 20 L 440 14 Z" fill="#280B22" />
+    <text x="12" y="14" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#F472B6">04 // MAYA-1 STREAMING TTS</text>
+    
+    <text x="12" y="40" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#F8FAFC">Chunked Speech Synthesis</text>
+    <text x="12" y="56" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8">Apple Silicon MPS / CUDA</text>
+    
+    <rect x="330" y="32" width="98" height="20" rx="3" fill="#500724" />
+    <text x="345" y="46" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#F472B6">SYNTH ~16ms</text>
+  </g>
+
+  <!-- ================= OSCILLOSCOPE & VU METERS ================= -->
+  <g transform="translate(20, 396)">
+    <!-- Scope Screen -->
+    <rect width="440" height="150" rx="8" fill="#020C07" stroke="#052E16" stroke-width="1.8" />
+    <rect width="440" height="150" rx="8" fill="url(#m-scope-grid)" />
+    
+    <text x="14" y="20" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#39FF14">
+      OSCILLOSCOPE // REAL-TIME SPEECH SPECTRUM
+    </text>
+
+    <!-- Waveform -->
+    <g transform="translate(10, 75)" stroke="#39FF14" stroke-width="2" fill="none" filter="url(#m-glow-2)">
+      <path d="M 0 0 Q 25 -45, 50 0 T 100 0 T 150 0 T 200 0 T 250 0 T 300 0 T 350 0 T 400 0 T 420 0" class="m-wave" />
+      <path d="M 0 0 Q 30 35, 60 0 T 120 0 T 180 0 T 240 0 T 300 0 T 360 0 T 420 0" stroke="#00F0FF" stroke-width="1.2" opacity="0.6" class="m-wave" />
+    </g>
+
+    <!-- VU Bar inside scope bottom -->
+    <g transform="translate(14, 120)">
+      <text x="0" y="10" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8">VU METERS</text>
+      <rect x="70" y="2" width="16" height="12" rx="2" fill="#39FF14" />
+      <rect x="90" y="2" width="16" height="12" rx="2" fill="#00F0FF" />
+      <text x="120" y="11" font-family="'JetBrains Mono', monospace" font-size="9" fill="#39FF14">48,000 SPS // STEREO LOCKED</text>
+    </g>
+  </g>
+
+  <!-- TOTAL LATENCY READOUT BANNER -->
+  <g transform="translate(20, 560)">
+    <rect width="440" height="42" rx="6" fill="#052E16" stroke="#39FF14" stroke-width="1.2" />
+    <text x="220" y="26" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12.5" font-weight="800" fill="#39FF14">
+      ⚡ END-TO-END PIPELINE: 98ms GLASS-TO-GLASS
+    </text>
+  </g>
+
+  <!-- Bottom Divider -->
+  <line x1="0" y1="660" x2="480" y2="660" stroke="#2B144E" stroke-width="1" />
+</svg>

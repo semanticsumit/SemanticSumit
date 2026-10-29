@@ -1,0 +1,236 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 520" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="m-fndr-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0602" />
+      <stop offset="50%" stop-color="#1A0D04" />
+      <stop offset="100%" stop-color="#080301" />
+    </linearGradient>
+
+    <linearGradient id="m-fndr-title" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="35%" stop-color="#FBBF24" />
+      <stop offset="70%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <filter id="m-fndr-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <pattern id="m-fndr-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#3D200A" stroke-width="0.6" stroke-opacity="0.35" />
+    </pattern>
+
+    <linearGradient id="m-laser-beam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0" />
+      <stop offset="60%" stop-color="#D97706" stop-opacity="0.15" />
+      <stop offset="90%" stop-color="#F59E0B" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#FBBF24" stop-opacity="0.85" />
+    </linearGradient>
+
+    <style>
+      @keyframes spinGimbal1 { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      @keyframes spinGimbal2 { 0% { transform: rotate(0deg); } 100% { transform: rotate(-360deg); } }
+      @keyframes tesseractPulse { 0%, 100% { transform: rotate(0deg) scale(1); } 50% { transform: rotate(180deg) scale(1.15); } }
+      @keyframes coreSingularity { 0%, 100% { r: 5; opacity: 1; } 50% { r: 7.5; opacity: 0.45; } }
+      @keyframes radarSweepArm { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      @keyframes eqPulseA { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+      @keyframes eqPulseB { 0%, 100% { opacity: 0.8; } 50% { opacity: 0.2; } }
+      @keyframes livePulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+      @keyframes type1 { 0%, 5% { opacity: 0; } 15%, 100% { opacity: 1; } }
+      @keyframes type2 { 0%, 35% { opacity: 0; } 45%, 100% { opacity: 1; } }
+      @keyframes type3 { 0%, 65% { opacity: 0; } 75%, 100% { opacity: 1; } }
+      @keyframes cursorBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+      @keyframes mGlobalScanHero {
+        0% { transform: translateY(-30px); opacity: 0; }
+        1% { opacity: 1; }
+        24.5% { transform: translateY(490px); opacity: 1; }
+        25.5% { transform: translateY(520px); opacity: 0; }
+        25.6%, 100% { transform: translateY(-30px); opacity: 0; }
+      }
+
+      .gimbal-1 { transform-origin: 0px 0px; animation: spinGimbal1 14s linear infinite; }
+      .gimbal-2 { transform-origin: 0px 0px; animation: spinGimbal2 8s linear infinite; }
+      .tesseract-box { transform-origin: 0px 0px; animation: tesseractPulse 7s ease-in-out infinite; }
+      .core-sing { animation: coreSingularity 2s infinite ease-in-out; }
+      .sweep-arm { transform-origin: 0px 0px; animation: radarSweepArm 3.2s linear infinite; }
+      .eq-bar-1 { animation: eqPulseA 1.4s infinite; }
+      .eq-bar-2 { animation: eqPulseB 1.8s infinite; }
+      .live-dot { animation: livePulse 1.2s infinite; }
+      .cursor { animation: cursorBlink 0.9s infinite; }
+      .m-global-scan-hero { animation: mGlobalScanHero 8s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Frame: Top rounded, bottom flat for zero-gap docking -->
+  <path d="M 0 14 Q 0 0 14 0 L 466 0 Q 480 0 480 14 L 480 520 L 0 520 Z" fill="url(#m-fndr-bg)" stroke="#F59E0B" stroke-width="1.8" />
+  <path d="M 0 14 Q 0 0 14 0 L 466 0 Q 480 0 480 14 L 480 520 L 0 520 Z" fill="url(#m-fndr-grid)" />
+
+  <!-- TOP MOBILE STATUS BAR -->
+  <g transform="translate(20, 26)">
+    <circle cx="0" cy="0" r="4.5" fill="#FBBF24" class="live-dot" />
+    <text x="14" y="4" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#FBBF24">
+      FOUNDER &amp; CTO · SYSTEM ARCHITECT
+    </text>
+    <text x="320" y="4" font-family="'JetBrains Mono', monospace" font-size="10" fill="#D97706">
+      0 ➔ 1 VENTURES
+    </text>
+    <line x1="-10" y1="14" x2="450" y2="14" stroke="#3D200A" stroke-width="1.2" />
+  </g>
+
+  <!-- TITLE & TAGLINE -->
+  <g transform="translate(20, 75)">
+    <text font-family="'Inter', -apple-system, sans-serif" font-size="36" font-weight="900" fill="url(#m-fndr-title)" filter="url(#m-fndr-glow)" letter-spacing="2">
+      SEMANTIC SUMIT
+    </text>
+    
+    <text y="30" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#F8FAFC">
+      Building AI Products &amp; Scaling Companies.
+    </text>
+
+    <text y="50" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#94A3B8">
+      Voice AI · LLMs &amp; Fine-Tuning · Agents · Apps.
+    </text>
+
+    <!-- 2x2 PILL BADGES FOR MOBILE -->
+    <g transform="translate(0, 68)">
+      <rect x="0" y="0" width="210" height="26" rx="13" fill="#140702" stroke="#F59E0B" stroke-width="1" />
+      <text x="16" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FDE68A">🚀 Founder &amp; CTO</text>
+
+      <rect x="225" y="0" width="215" height="26" rx="13" fill="#140702" stroke="#F59E0B" stroke-width="1" />
+      <text x="241" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FDE68A">🎙️ Real-Time Voice</text>
+
+      <rect x="0" y="34" width="210" height="26" rx="13" fill="#140702" stroke="#D97706" stroke-width="1" />
+      <text x="16" y="51" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FCD34D">🧠 LLMs &amp; Fine-Tuning</text>
+
+      <rect x="225" y="34" width="215" height="26" rx="13" fill="#140702" stroke="#D97706" stroke-width="1" />
+      <text x="241" y="51" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FCD34D">📱 Full-Stack Apps</text>
+    </g>
+  </g>
+
+  <!-- LIVE TYPING TERMINAL -->
+  <g transform="translate(20, 225)">
+    <rect width="440" height="135" rx="8" fill="#070301" stroke="#2E1706" stroke-width="1.2" />
+    <rect width="440" height="24" rx="8" fill="#140802" />
+    <path d="M 0 18 L 0 24 L 440 24 L 440 18 Z" fill="#140802" />
+    <circle cx="14" cy="12" r="3.5" fill="#EF4444" />
+    <circle cx="26" cy="12" r="3.5" fill="#F59E0B" />
+    <circle cx="38" cy="12" r="3.5" fill="#10B981" />
+    <text x="54" y="16" font-family="'JetBrains Mono', monospace" font-size="10" fill="#71717A">founder_terminal — sumit@7silicongroup</text>
+
+    <g transform="translate(16, 46)" font-family="'JetBrains Mono', monospace" font-size="11">
+      <g style="animation: type1 8s infinite;">
+        <text y="0" fill="#FBBF24" font-weight="700">sumit@7silicongroup:~$</text>
+        <text x="158" y="0" fill="#F8FAFC">./ship_company.sh</text>
+      </g>
+      <g style="animation: type2 8s infinite;" transform="translate(0, 22)">
+        <text y="0" fill="#F59E0B">[SYS]</text>
+        <text x="45" y="0" fill="#E2E8F0">Voice AI + LLM Fine-Tuning + Apps Synced</text>
+      </g>
+      <g style="animation: type3 8s infinite;" transform="translate(0, 44)">
+        <text y="0" fill="#FDE68A">"Understand the system. Build the company."</text>
+        <rect x="330" y="-10" width="7" height="13" fill="#FBBF24" class="cursor" />
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= MOBILE QUANTUM REACTOR COCKPIT ================= -->
+  <g transform="translate(20, 372)">
+    <!-- Chassis Bracket -->
+    <rect width="440" height="136" rx="8" fill="#070301" stroke="#2E1706" stroke-width="1.2" />
+    <rect width="440" height="22" rx="8" fill="#140802" />
+    <path d="M 0 16 L 0 22 L 440 22 L 440 16 Z" fill="#140802" />
+    <text x="12" y="15" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#94A3B8">QUANTUM HYPERCORE · TESSERACT</text>
+    <circle cx="396" cy="11" r="3" fill="#FBBF24" class="live-dot" />
+    <text x="404" y="15" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="800" fill="#FBBF24">ONLINE</text>
+
+    <!-- Left Telemetry Column -->
+    <g transform="translate(12, 38)" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">
+      <rect width="78" height="20" rx="10" fill="#140702" stroke="#4D2808" stroke-width="0.9" />
+      <text x="39" y="14" text-anchor="middle" fill="#FBBF24">🧠 142 T/S</text>
+
+      <rect y="26" width="78" height="20" rx="10" fill="#140702" stroke="#4D2808" stroke-width="0.9" />
+      <text x="39" y="40" text-anchor="middle" fill="#FDE68A">🎙️ &lt;84MS</text>
+    </g>
+
+    <!-- Right Telemetry Column -->
+    <g transform="translate(350, 38)" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">
+      <rect width="78" height="20" rx="10" fill="#140702" stroke="#4D2808" stroke-width="0.9" />
+      <text x="39" y="14" text-anchor="middle" fill="#F59E0B">⚡ &lt;18MS</text>
+
+      <rect y="26" width="78" height="20" rx="10" fill="#140702" stroke="#4D2808" stroke-width="0.9" />
+      <text x="39" y="40" text-anchor="middle" fill="#FCD34D">🧪 SWARM L4</text>
+    </g>
+
+    <!-- CENTER QUANTUM REACTOR (Origin at 220, 68) -->
+    <g transform="translate(220, 68)">
+      <!-- Chamber Well -->
+      <polygon points="0,-38 32,-19 32,19 0,38 -32,19 -32,-19" fill="#0E0702" stroke="#3D200A" stroke-width="1" />
+
+      <!-- VOICE AI RADIAL AUDIO EQUALIZER (8 Frequencies) -->
+      <g stroke-linecap="round" stroke-width="1.6">
+        <line x1="0" y1="-38" x2="0" y2="-44" stroke="#FBBF24" class="eq-bar-1" />
+        <line x1="27" y1="-27" x2="31" y2="-31" stroke="#F59E0B" class="eq-bar-2" />
+        <line x1="38" y1="0" x2="44" y2="0" stroke="#FBBF24" class="eq-bar-1" />
+        <line x1="27" y1="27" x2="31" y2="31" stroke="#D97706" class="eq-bar-2" />
+        <line x1="0" y1="38" x2="0" y2="44" stroke="#FBBF24" class="eq-bar-1" />
+        <line x1="-27" y1="27" x2="-31" y2="31" stroke="#F59E0B" class="eq-bar-2" />
+        <line x1="-38" y1="0" x2="-44" y2="0" stroke="#FBBF24" class="eq-bar-1" />
+        <line x1="-27" y1="-27" x2="-31" y2="-31" stroke="#D97706" class="eq-bar-2" />
+      </g>
+
+      <!-- Outer Gimbal Ring 1 -->
+      <g class="gimbal-1">
+        <circle cx="0" cy="0" r="32" fill="none" stroke="#F59E0B" stroke-width="1.4" stroke-dasharray="16, 8, 4, 8" />
+        <circle cx="0" cy="-32" r="2.2" fill="#FBBF24" />
+        <circle cx="32" cy="0" r="2.2" fill="#FBBF24" />
+        <circle cx="0" cy="32" r="2.2" fill="#FBBF24" />
+        <circle cx="-32" cy="0" r="2.2" fill="#FBBF24" />
+      </g>
+
+      <!-- Middle Gimbal Ring 2 -->
+      <g class="gimbal-2">
+        <ellipse cx="0" cy="0" rx="26" ry="11" fill="none" stroke="#D97706" stroke-width="1.2" stroke-dasharray="10, 6" />
+      </g>
+
+      <!-- Sweep Arm -->
+      <g class="sweep-arm">
+        <line x1="0" y1="0" x2="0" y2="-32" stroke="#FBBF24" stroke-width="1.6" />
+      </g>
+
+      <!-- 3D Morphing Tesseract -->
+      <g class="tesseract-box">
+        <polygon points="0,-18 18,0 0,18 -18,0" fill="#1C0D04" fill-opacity="0.6" stroke="#F59E0B" stroke-width="1.2" />
+        <polygon points="0,-9 9,0 0,9 -9,0" fill="#120602" fill-opacity="0.75" stroke="#FBBF24" stroke-width="1" />
+        <line x1="0" y1="-18" x2="0" y2="-9" stroke="#F59E0B" stroke-width="1" />
+        <line x1="18" y1="0" x2="9" y2="0" stroke="#F59E0B" stroke-width="1" />
+        <line x1="0" y1="18" x2="0" y2="9" stroke="#F59E0B" stroke-width="1" />
+        <line x1="-18" y1="0" x2="-9" y2="0" stroke="#F59E0B" stroke-width="1" />
+      </g>
+
+      <!-- Singularity Core -->
+      <circle cx="0" cy="0" r="5" fill="#FBBF24" filter="url(#m-fndr-glow)" class="core-sing" />
+      <circle cx="0" cy="0" r="2" fill="#FFFFFF" />
+    </g>
+
+    <!-- Cockpit Footer -->
+    <line x1="10" y1="114" x2="430" y2="114" stroke="#3D200A" stroke-width="0.8" />
+    <text x="220" y="128" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" fill="#FBBF24" letter-spacing="0.5">
+      ARCH: DISTRIBUTED · PRODUCT: ZERO ➔ 1
+    </text>
+  </g>
+
+  <!-- Bottom Divider -->
+  <line x1="0" y1="520" x2="480" y2="520" stroke="#F59E0B" stroke-width="1" />
+
+  <!-- Global Mobile Scanline Beam (0% to 25.5%) -->
+  <g class="m-global-scan-hero" pointer-events="none">
+    <rect width="480" height="24" fill="url(#m-laser-beam)" />
+    <line x1="0" y1="24" x2="480" y2="24" stroke="#FBBF24" stroke-width="2" filter="url(#m-fndr-glow)" />
+    <line x1="0" y1="23" x2="480" y2="23" stroke="#FFFFFF" stroke-width="0.8" />
+  </g>
+</svg>

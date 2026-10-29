@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg-09" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05030D" />
+      <stop offset="50%" stop-color="#0E0820" />
+      <stop offset="100%" stop-color="#040209" />
+    </linearGradient>
+
+    <linearGradient id="btn-glow-09" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+
+    <filter id="glow-09">
+      <feGaussianBlur stdDeviation="3" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="320" rx="14" fill="url(#bg-09)" stroke="#2B164A" stroke-width="1.8" />
+
+  <!-- HEADER -->
+  <g transform="translate(45, 26)">
+    <text x="0" y="4" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#00F0FF" letter-spacing="1.5">
+      🛸 QUANTUM TRANSMISSION UPLINK // COMMS CHANNELS ONLINE
+    </text>
+    <text x="730" y="4" font-family="'JetBrains Mono', monospace" font-size="11" fill="#A855F7">
+      FREQUENCY: 1420MHz // ENCRYPTION: 4096-BIT CURVE25519
+    </text>
+    <line x1="0" y1="16" x2="1110" y2="16" stroke="#251642" stroke-width="1.2" />
+  </g>
+
+  <!-- TRANSMISSION PROMPT -->
+  <g transform="translate(60, 65)">
+    <text font-family="'Inter', -apple-system, sans-serif" font-size="20" font-weight="900" fill="#FFFFFF" letter-spacing="1">
+      HAVE AN UNREASONABLE IDEA? A SUB-100MS VOICE AI CHALLENGE?
+    </text>
+    <text y="26" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#39FF14">
+      Or a problem that starts with "Hear me out, this might be completely wild..."?
+    </text>
+  </g>
+
+  <!-- 4 TRANSMISSION CHANNELS (VISUAL DISPLAY) -->
+  <g transform="translate(60, 125)">
+    <!-- Channel 1: LinkedIn -->
+    <g transform="translate(0, 0)">
+      <rect width="255" height="55" rx="8" fill="#0C142A" stroke="#00F0FF" stroke-width="1.4" />
+      <text x="20" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#00F0FF">CHANNEL 01 // LINKEDIN</text>
+      <text x="20" y="42" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900" fill="#FFFFFF">TRANSMIT DIRECT ↗</text>
+    </g>
+
+    <!-- Channel 2: Email -->
+    <g transform="translate(275, 0)">
+      <rect width="255" height="55" rx="8" fill="#1C091C" stroke="#EC4899" stroke-width="1.4" />
+      <text x="20" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#EC4899">CHANNEL 02 // EMAIL</text>
+      <text x="20" y="42" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900" fill="#FFFFFF">DISPATCH PULSE ↗</text>
+    </g>
+
+    <!-- Channel 3: Instagram -->
+    <g transform="translate(550, 0)">
+      <rect width="255" height="55" rx="8" fill="#180A26" stroke="#A855F7" stroke-width="1.4" />
+      <text x="20" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#D8B4FE">CHANNEL 03 // INSTAGRAM</text>
+      <text x="20" y="42" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900" fill="#FFFFFF">ENTER SIDE QUEST ↗</text>
+    </g>
+
+    <!-- Channel 4: GitHub -->
+    <g transform="translate(825, 0)">
+      <rect width="255" height="55" rx="8" fill="#071A12" stroke="#39FF14" stroke-width="1.4" />
+      <text x="20" y="24" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#39FF14">CHANNEL 04 // GITHUB</text>
+      <text x="20" y="42" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900" fill="#FFFFFF">INSPECT REPOS ↗</text>
+    </g>
+  </g>
+
+  <!-- TERMINAL CURL PING READOUT -->
+  <g transform="translate(60, 205)">
+    <rect width="1080" height="55" rx="6" fill="#070410" stroke="#251642" stroke-width="1" />
+    <text x="20" y="24" font-family="'JetBrains Mono', monospace" font-size="11" fill="#39FF14" font-weight="700">
+      sumit@neural-cortex:~$
+    </text>
+    <text x="195" y="24" font-family="'JetBrains Mono', monospace" font-size="11" fill="#F8FAFC">
+      curl -X POST https://api.semanticsumit.dev/uplink -H "Authorization: Bearer BOLD_IDEAS_ONLY"
+    </text>
+    <text x="20" y="44" font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8">
+      RESPONSE: 200 OK · "Transmission received. Preparing to build something unexpected."
+    </text>
+  </g>
+
+  <!-- BOTTOM WARNING -->
+  <g transform="translate(60, 290)">
+    <text font-family="'JetBrains Mono', monospace" font-size="10" fill="#71717A" letter-spacing="1.5">
+      ⚠️ STRICT POLICY: NO BORING PROJECTS ALLOWED. BAD IDEAS MAY BE ACCEPTED AFTER REVIEW.
+    </text>
+  </g>
+</svg>

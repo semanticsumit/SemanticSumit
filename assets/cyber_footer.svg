@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 180" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="footer-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05050B" />
+      <stop offset="50%" stop-color="#140827" />
+      <stop offset="100%" stop-color="#05050B" />
+    </linearGradient>
+
+    <linearGradient id="sun-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="60%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+
+    <linearGradient id="laser-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00F0FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="f-glow">
+      <feGaussianBlur stdDeviation="4" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes sunPulse {
+        0%, 100% { transform: scale(1); opacity: 0.85; }
+        50% { transform: scale(1.04); opacity: 1; }
+      }
+      @keyframes neonFlicker {
+        0%, 100% { opacity: 1; }
+        92% { opacity: 1; }
+        93% { opacity: 0.3; }
+        94% { opacity: 1; }
+      }
+      .sun {
+        transform-origin: 600px 90px;
+        animation: sunPulse 4s ease-in-out infinite;
+      }
+      .flicker {
+        animation: neonFlicker 3s infinite;
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="180" rx="10" fill="url(#footer-bg)" stroke="#2C124D" stroke-width="1.5" />
+
+  <!-- Wireframe Synthwave Horizon Floor -->
+  <g opacity="0.35">
+    <line x1="0" y1="120" x2="1200" y2="120" stroke="#7928CA" stroke-width="1.2" />
+    <line x1="0" y1="135" x2="1200" y2="135" stroke="#7928CA" stroke-width="1.2" />
+    <line x1="0" y1="155" x2="1200" y2="155" stroke="#7928CA" stroke-width="1.5" />
+    <line x1="0" y1="180" x2="1200" y2="180" stroke="#00F0FF" stroke-width="2" />
+
+    <!-- Perspective convergence lines to (600, 110) -->
+    <line x1="100" y1="180" x2="600" y2="110" stroke="#A855F7" stroke-width="0.8" />
+    <line x1="300" y1="180" x2="600" y2="110" stroke="#A855F7" stroke-width="0.8" />
+    <line x1="500" y1="180" x2="600" y2="110" stroke="#A855F7" stroke-width="0.8" />
+    <line x1="700" y1="180" x2="600" y2="110" stroke="#A855F7" stroke-width="0.8" />
+    <line x1="900" y1="180" x2="600" y2="110" stroke="#A855F7" stroke-width="0.8" />
+    <line x1="1100" y1="180" x2="600" y2="110" stroke="#A855F7" stroke-width="0.8" />
+  </g>
+
+  <!-- Glowing Sun setting over wireframe -->
+  <g class="sun">
+    <circle cx="600" cy="110" r="55" fill="url(#sun-grad)" opacity="0.8" filter="url(#f-glow)" />
+    <!-- Sun horizontal slice cuts -->
+    <line x1="550" y1="95" x2="650" y2="95" stroke="#140827" stroke-width="3" />
+    <line x1="546" y1="102" x2="654" y2="102" stroke="#140827" stroke-width="4" />
+    <line x1="550" y1="110" x2="650" y2="110" stroke="#140827" stroke-width="5" />
+  </g>
+
+  <line x1="100" y1="110" x2="1100" y2="110" stroke="url(#laser-glow)" stroke-width="2" />
+
+  <!-- Center Text -->
+  <g transform="translate(600, 50)" text-anchor="middle" class="flicker">
+    <text font-family="'JetBrains Mono', 'Segoe UI', monospace" font-size="20" font-weight="900" fill="#FFFFFF" letter-spacing="3" filter="url(#f-glow)">
+      GAME OVER? NOT EVEN CLOSE.
+    </text>
+  </g>
+
+  <g transform="translate(600, 78)" text-anchor="middle">
+    <text font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#39FF14" letter-spacing="1.5">
+      sudo make_reality_interesting --force
+    </text>
+  </g>
+
+  <g transform="translate(600, 160)" text-anchor="middle">
+    <text font-family="'JetBrains Mono', monospace" font-size="10" fill="#94A3B8" letter-spacing="2">
+      // ENGINEERED BY SEMANTICSUMIT · DESIGNED FOR MINDS THAT REFUSE TO BE BORING //
+    </text>
+  </g>
+</svg>

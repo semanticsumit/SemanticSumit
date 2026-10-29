@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg-05" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05030D" />
+      <stop offset="50%" stop-color="#0E0820" />
+      <stop offset="100%" stop-color="#040209" />
+    </linearGradient>
+
+    <pattern id="grid-05" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#23133B" stroke-width="0.5" stroke-opacity="0.35" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="340" rx="14" fill="url(#bg-05)" stroke="#2B164A" stroke-width="1.8" />
+  <rect width="1200" height="340" rx="14" fill="url(#grid-05)" />
+
+  <!-- HEADER -->
+  <g transform="translate(45, 26)">
+    <text x="0" y="4" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#00F0FF" letter-spacing="1.5">
+      // TACTICAL ARSENAL &amp; COMBAT WEAPON LOADOUT
+    </text>
+    <text x="690" y="4" font-family="'JetBrains Mono', monospace" font-size="11" fill="#A855F7">
+      CALIBER: HIGH-CONCURRENCY // WEAPONIZED KERNELS &amp; REALTIME MODELS
+    </text>
+    <line x1="0" y1="16" x2="1110" y2="16" stroke="#251642" stroke-width="1.2" />
+  </g>
+
+  <!-- ================= SECTION 1: NEURAL & VOICE ENGINE ================= -->
+  <g transform="translate(45, 55)">
+    <rect width="1110" height="75" rx="8" fill="#080514" stroke="#7928CA" stroke-width="1" />
+    <text x="18" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#00F0FF">
+      01. NEURAL &amp; VOICE AI ENGINE
+    </text>
+
+    <!-- Weapons list -->
+    <g transform="translate(18, 38)">
+      <!-- Item 1: Python -->
+      <rect x="0" y="0" width="165" height="26" rx="4" fill="#14092A" stroke="#00F0FF" stroke-width="0.8" />
+      <text x="10" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#00F0FF">🐍 PYTHON [CORE]</text>
+
+      <!-- Item 2: LiveKit -->
+      <rect x="180" y="0" width="180" height="26" rx="4" fill="#14092A" stroke="#39FF14" stroke-width="0.8" />
+      <text x="190" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#39FF14">🎙️ LIVEKIT / WEBRTC</text>
+
+      <!-- Item 3: Whisper -->
+      <rect x="375" y="0" width="175" height="26" rx="4" fill="#14092A" stroke="#3B82F6" stroke-width="0.8" />
+      <text x="385" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#60A5FA">⚡ STREAMING WHISPER</text>
+
+      <!-- Item 4: Maya-1 -->
+      <rect x="565" y="0" width="180" height="26" rx="4" fill="#14092A" stroke="#EC4899" stroke-width="0.8" />
+      <text x="575" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#F472B6">🔊 MAYA-1 TTS [98ms]</text>
+
+      <!-- Item 5: PyTorch -->
+      <rect x="760" y="0" width="160" height="26" rx="4" fill="#14092A" stroke="#F97316" stroke-width="0.8" />
+      <text x="770" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#FB923C">🔥 PYTORCH / CUDA</text>
+
+      <!-- Item 6: LangChain -->
+      <rect x="935" y="0" width="160" height="26" rx="4" fill="#14092A" stroke="#A855F7" stroke-width="0.8" />
+      <text x="945" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#D8B4FE">🧠 AGENT SWARMS</text>
+    </g>
+  </g>
+
+  <!-- ================= SECTION 2: CORE SYSTEMS & INFRA ================= -->
+  <g transform="translate(45, 145)">
+    <rect width="1110" height="75" rx="8" fill="#080514" stroke="#2563EB" stroke-width="1" />
+    <text x="18" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#60A5FA">
+      02. BACKEND RUNTIME, INFRASTRUCTURE &amp; VECTOR STORES
+    </text>
+
+    <g transform="translate(18, 38)">
+      <!-- Item 1: FastAPI -->
+      <rect x="0" y="0" width="165" height="26" rx="4" fill="#101838" stroke="#10B981" stroke-width="0.8" />
+      <text x="10" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#34D399">⚡ FASTAPI [ASYNC]</text>
+
+      <!-- Item 2: Docker -->
+      <rect x="180" y="0" width="180" height="26" rx="4" fill="#101838" stroke="#38BDF8" stroke-width="0.8" />
+      <text x="190" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#38BDF8">🐳 DOCKER &amp; GHCR</text>
+
+      <!-- Item 3: Linux -->
+      <rect x="375" y="0" width="175" height="26" rx="4" fill="#101838" stroke="#FACC15" stroke-width="0.8" />
+      <text x="385" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#FACC15">🐧 LINUX [ROOT OPT]</text>
+
+      <!-- Item 4: Postgres -->
+      <rect x="565" y="0" width="180" height="26" rx="4" fill="#101838" stroke="#3B82F6" stroke-width="0.8" />
+      <text x="575" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#60A5FA">🐘 PGVECTOR &amp; SQL</text>
+
+      <!-- Item 5: Redis -->
+      <rect x="760" y="0" width="160" height="26" rx="4" fill="#101838" stroke="#EF4444" stroke-width="0.8" />
+      <text x="770" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#F87171">⚡ REDIS STREAMS</text>
+
+      <!-- Item 6: Git -->
+      <rect x="935" y="0" width="160" height="26" rx="4" fill="#101838" stroke="#F97316" stroke-width="0.8" />
+      <text x="945" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#FB923C">🐙 GIT ACTIONS</text>
+    </g>
+  </g>
+
+  <!-- ================= SECTION 3: FRONTEND & INTERFACES ================= -->
+  <g transform="translate(45, 235)">
+    <rect width="1110" height="75" rx="8" fill="#080514" stroke="#EC4899" stroke-width="1" />
+    <text x="18" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#F472B6">
+      03. INTERFACE MATRIX &amp; MODERN WEB STACKS
+    </text>
+
+    <g transform="translate(18, 38)">
+      <!-- Item 1: TypeScript -->
+      <rect x="0" y="0" width="165" height="26" rx="4" fill="#200B1E" stroke="#38BDF8" stroke-width="0.8" />
+      <text x="10" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#38BDF8">🔷 TYPESCRIPT</text>
+
+      <!-- Item 2: React -->
+      <rect x="180" y="0" width="180" height="26" rx="4" fill="#200B1E" stroke="#00F0FF" stroke-width="0.8" />
+      <text x="190" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#00F0FF">⚛️ REACT / NEXT.JS</text>
+
+      <!-- Item 3: Node.js -->
+      <rect x="375" y="0" width="175" height="26" rx="4" fill="#200B1E" stroke="#22C55E" stroke-width="0.8" />
+      <text x="385" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#4ADE80">🟢 NODE.JS / JS</text>
+
+      <!-- Item 4: WebSockets -->
+      <rect x="565" y="0" width="180" height="26" rx="4" fill="#200B1E" stroke="#F59E0B" stroke-width="0.8" />
+      <text x="575" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#FBBF24">⚡ WEBSOCKETS / WS</text>
+
+      <!-- Item 5: Tailwind / Vanilla CSS -->
+      <rect x="760" y="0" width="160" height="26" rx="4" fill="#200B1E" stroke="#EC4899" stroke-width="0.8" />
+      <text x="770" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#F472B6">🎨 VANILLA CSS</text>
+
+      <!-- Item 6: PHP / Laravel -->
+      <rect x="935" y="0" width="160" height="26" rx="4" fill="#200B1E" stroke="#A855F7" stroke-width="0.8" />
+      <text x="945" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#D8B4FE">🐘 PHP / LARAVEL</text>
+    </g>
+  </g>
+</svg>

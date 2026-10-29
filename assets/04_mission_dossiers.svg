@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg-04" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05030D" />
+      <stop offset="50%" stop-color="#0D071D" />
+      <stop offset="100%" stop-color="#04020A" />
+    </linearGradient>
+
+    <pattern id="grid-04" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#21123B" stroke-width="0.6" stroke-opacity="0.35" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="380" rx="14" fill="url(#bg-04)" stroke="#2B164A" stroke-width="1.8" />
+  <rect width="1200" height="380" rx="14" fill="url(#grid-04)" />
+
+  <!-- HEADER -->
+  <g transform="translate(45, 26)">
+    <text x="0" y="4" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#00F0FF" letter-spacing="1.5">
+      // ACTIVE MISSION DOSSIERS &amp; PRODUCTION PROTOCOLS
+    </text>
+    <text x="680" y="4" font-family="'JetBrains Mono', monospace" font-size="11" fill="#A855F7">
+      DEPLOYMENT STATE: ALL SYSTEMS OVERCLOCKED // ZERO DEFECT RATE
+    </text>
+    <line x1="0" y1="16" x2="1110" y2="16" stroke="#251642" stroke-width="1.2" />
+  </g>
+
+  <!-- ================= 2x2 GRID OF MISSION CARDS ================= -->
+
+  <!-- CARD 1: THE VOICE -->
+  <g transform="translate(45, 60)">
+    <rect width="540" height="135" rx="8" fill="#080514" stroke="#00F0FF" stroke-width="1.2" />
+    <rect width="540" height="24" rx="8" fill="#110A26" />
+    <path d="M 0 18 L 0 24 L 540 24 L 540 18 Z" fill="#110A26" />
+    <text x="14" y="16" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#00F0FF">
+      🎙️ 01 // THE VOICE: PROJECT MAYA-1
+    </text>
+    <rect x="420" y="4" width="105" height="16" rx="3" fill="#052E16" />
+    <text x="430" y="15" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#39FF14">● SUB-100ms LIVE</text>
+
+    <g transform="translate(16, 42)" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#E2E8F0">
+      <text y="0">Real-time streaming TTS engineered for Apple Silicon &amp; CUDA serverless.</text>
+      <text y="20" fill="#94A3B8">• Zero-buffer chunked audio synthesis with WebRTC / LiveKit duplex.</text>
+      <text y="38" fill="#94A3B8">• Sub-30ms first-packet latency; indistinguishable from natural dialogue.</text>
+      <text y="58" fill="#39FF14" font-weight="700">STATUS: ACTIVE IN PRODUCTION // REPLACING LEGACY BATCH TTS</text>
+    </g>
+  </g>
+
+  <!-- CARD 2: THE BRAIN -->
+  <g transform="translate(615, 60)">
+    <rect width="540" height="135" rx="8" fill="#080514" stroke="#A855F7" stroke-width="1.2" />
+    <rect width="540" height="24" rx="8" fill="#180C30" />
+    <path d="M 0 18 L 0 24 L 540 24 L 540 18 Z" fill="#180C30" />
+    <text x="14" y="16" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#D8B4FE">
+      🧠 02 // THE BRAIN: AUTONOMOUS AGENT SWARMS
+    </text>
+    <rect x="420" y="4" width="105" height="16" rx="3" fill="#3B0764" />
+    <text x="434" y="15" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#D8B4FE">● REASONING CORE</text>
+
+    <g transform="translate(16, 42)" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#E2E8F0">
+      <text y="0">Multi-agent coordination engines with persistent semantic memory graphs.</text>
+      <text y="20" fill="#94A3B8">• Dynamic agent handoffs, self-reflecting loops &amp; tool execution.</text>
+      <text y="38" fill="#94A3B8">• Sub-millisecond vector retrieval (RAG) across millions of documents.</text>
+      <text y="58" fill="#A855F7" font-weight="700">STATUS: DEPLOYED // AUTONOMOUS SWARMS RESOLVING COMPLEX TASKS</text>
+    </g>
+  </g>
+
+  <!-- CARD 3: THE ANOMALY LAB -->
+  <g transform="translate(45, 215)">
+    <rect width="540" height="135" rx="8" fill="#080514" stroke="#39FF14" stroke-width="1.2" />
+    <rect width="540" height="24" rx="8" fill="#0C1F14" />
+    <path d="M 0 18 L 0 24 L 540 24 L 540 18 Z" fill="#0C1F14" />
+    <text x="14" y="16" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#39FF14">
+      🧪 03 // THE ANOMALY LAB: 3 AM BREAKTHROUGHS
+    </text>
+    <rect x="420" y="4" width="105" height="16" rx="3" fill="#14381C" />
+    <text x="435" y="15" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#39FF14">● EXPERIMENTAL</text>
+
+    <g transform="translate(16, 42)" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#E2E8F0">
+      <text y="0">Rogue prototypes exploring the boundary between software and magic.</text>
+      <text y="20" fill="#94A3B8">• Generative audio spatialization and neural terminal interfaces.</text>
+      <text y="38" fill="#94A3B8">• Turning ideas that "shouldn't work" into working prototypes in 1 night.</text>
+      <text y="58" fill="#39FF14" font-weight="700">STATUS: ROGUE PROTOCOLS COMPILING IN BACKGROUND</text>
+    </g>
+  </g>
+
+  <!-- CARD 4: THE MACHINE -->
+  <g transform="translate(615, 215)">
+    <rect width="540" height="135" rx="8" fill="#080514" stroke="#F59E0B" stroke-width="1.2" />
+    <rect width="540" height="24" rx="8" fill="#241508" />
+    <path d="M 0 18 L 0 24 L 540 24 L 540 18 Z" fill="#241508" />
+    <text x="14" y="16" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#FBBF24">
+      ⚙️ 04 // THE MACHINE: QUANTUM INFRASTRUCTURE
+    </text>
+    <rect x="420" y="4" width="105" height="16" rx="3" fill="#451A03" />
+    <text x="432" y="15" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#FBBF24">● BULLETPROOF</text>
+
+    <g transform="translate(16, 42)" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#E2E8F0">
+      <text y="0">Production-hardened distributed pipelines built to never drop a frame.</text>
+      <text y="20" fill="#94A3B8">• FastAPI asynchronous event loop concurrency &amp; low-latency microservices.</text>
+      <text y="38" fill="#94A3B8">• Docker container clusters with automated GHCR deployment pipelines.</text>
+      <text y="58" fill="#F59E0B" font-weight="700">STATUS: 99.99% UPTIME // DISTRIBUTED ACROSS RUNPOD &amp; CLOUD</text>
+    </g>
+  </g>
+</svg>

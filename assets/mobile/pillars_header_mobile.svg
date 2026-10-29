@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 35" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="m-hdr-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0E0602" />
+      <stop offset="50%" stop-color="#1A0D04" />
+      <stop offset="100%" stop-color="#080301" />
+    </linearGradient>
+
+    <linearGradient id="m-hdr-laser" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0" />
+      <stop offset="60%" stop-color="#D97706" stop-opacity="0.15" />
+      <stop offset="90%" stop-color="#F59E0B" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#FBBF24" stop-opacity="0.85" />
+    </linearGradient>
+
+    <style>
+      @keyframes mScanHdr {
+        0%, 25.4% { transform: translateY(-20px); opacity: 0; }
+        25.5% { transform: translateY(-10px); opacity: 1; }
+        27.0% { transform: translateY(28px); opacity: 1; }
+        27.2% { transform: translateY(35px); opacity: 0; }
+        27.3%, 100% { transform: translateY(-20px); opacity: 0; }
+      }
+      .m-scan-beam-hdr { animation: mScanHdr 8s linear infinite; }
+    </style>
+  </defs>
+
+  <rect width="480" height="35" fill="url(#m-hdr-bg)" stroke="#F59E0B" stroke-width="1.2" />
+
+  <g transform="translate(16, 22)">
+    <circle cx="0" cy="-3" r="3.5" fill="#FBBF24" />
+    <text x="10" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="800" fill="#FBBF24" letter-spacing="1">
+      CORE EXPERTISE · WHAT I BUILD &amp; SHIP
+    </text>
+  </g>
+
+  <!-- Global Mobile Scanline Beam Segment (25.5% to 27.2%) -->
+  <g class="m-scan-beam-hdr" pointer-events="none">
+    <rect width="480" height="18" fill="url(#m-hdr-laser)" />
+    <line x1="0" y1="18" x2="480" y2="18" stroke="#FBBF24" stroke-width="2" />
+    <line x1="0" y1="17" x2="480" y2="17" stroke="#FFFFFF" stroke-width="0.8" />
+  </g>
+</svg>

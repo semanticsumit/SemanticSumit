@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 720" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="mob-bg-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05020C" />
+      <stop offset="50%" stop-color="#0E0820" />
+      <stop offset="100%" stop-color="#04020A" />
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="720" fill="url(#mob-bg-3)" stroke="#2B144E" stroke-width="1.8" />
+
+  <!-- HEADER -->
+  <g transform="translate(20, 26)">
+    <text x="0" y="4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#00F0FF" letter-spacing="1">
+      ACTIVE MISSIONS &amp; PRODUCTION PROTOCOLS
+    </text>
+    <line x1="-10" y1="14" x2="450" y2="14" stroke="#251642" stroke-width="1.2" />
+  </g>
+
+  <!-- ================= 4 STACKED MISSION CARDS ================= -->
+  <!-- Card 1: Maya-1 -->
+  <g transform="translate(20, 50)">
+    <rect width="440" height="95" rx="8" fill="#080414" stroke="#00F0FF" stroke-width="1.2" />
+    <rect width="440" height="22" rx="8" fill="#120A28" />
+    <path d="M 0 16 L 0 22 L 440 22 L 440 16 Z" fill="#120A28" />
+    <text x="12" y="15" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#00F0FF">🎙️ 01. PROJECT MAYA-1 [VOICE AI]</text>
+    <rect x="330" y="3" width="98" height="16" rx="3" fill="#052E16" />
+    <text x="340" y="14" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#39FF14">● SUB-100ms LIVE</text>
+    
+    <g transform="translate(14, 40)" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#E2E8F0">
+      <text y="0" font-weight="700">Real-Time Streaming TTS (Apple Silicon &amp; CUDA)</text>
+      <text y="18" fill="#94A3B8">• Sub-30ms first-packet audio synthesis</text>
+      <text y="36" fill="#39FF14" font-weight="700">STATUS: DEPLOYED IN PRODUCTION</text>
+    </g>
+  </g>
+
+  <!-- Card 2: Autonomous Swarms -->
+  <g transform="translate(20, 155)">
+    <rect width="440" height="95" rx="8" fill="#080414" stroke="#A855F7" stroke-width="1.2" />
+    <rect width="440" height="22" rx="8" fill="#1A0C30" />
+    <path d="M 0 16 L 0 22 L 440 22 L 440 16 Z" fill="#1A0C30" />
+    <text x="12" y="15" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#D8B4FE">🧠 02. AUTONOMOUS SWARMS</text>
+    <rect x="330" y="3" width="98" height="16" rx="3" fill="#3B0764" />
+    <text x="345" y="14" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#D8B4FE">● REASONING</text>
+    
+    <g transform="translate(14, 40)" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#E2E8F0">
+      <text y="0" font-weight="700">Multi-Agent Coordination &amp; Vector RAG</text>
+      <text y="18" fill="#94A3B8">• Self-reflecting execution &amp; dynamic routing</text>
+      <text y="36" fill="#D8B4FE" font-weight="700">STATUS: REASONING &amp; SELF-HEALING</text>
+    </g>
+  </g>
+
+  <!-- Card 3: Quantum Infra -->
+  <g transform="translate(20, 260)">
+    <rect width="440" height="95" rx="8" fill="#080414" stroke="#F59E0B" stroke-width="1.2" />
+    <rect width="440" height="22" rx="8" fill="#241406" />
+    <path d="M 0 16 L 0 22 L 440 22 L 440 16 Z" fill="#241406" />
+    <text x="12" y="15" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#FBBF24">⚙️ 03. QUANTUM INFRASTRUCTURE</text>
+    <rect x="330" y="3" width="98" height="16" rx="3" fill="#451A03" />
+    <text x="342" y="14" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#FBBF24">● BULLETPROOF</text>
+    
+    <g transform="translate(14, 40)" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#E2E8F0">
+      <text y="0" font-weight="700">FastAPI &amp; Docker Micro-Engines</text>
+      <text y="18" fill="#94A3B8">• Distributed WebSockets &amp; Redis Streams</text>
+      <text y="36" fill="#FBBF24" font-weight="700">STATUS: 99.99% PRODUCTION UPTIME</text>
+    </g>
+  </g>
+
+  <!-- Card 4: The Anomaly Lab -->
+  <g transform="translate(20, 365)">
+    <rect width="440" height="95" rx="8" fill="#080414" stroke="#39FF14" stroke-width="1.2" />
+    <rect width="440" height="22" rx="8" fill="#0C1F12" />
+    <path d="M 0 16 L 0 22 L 440 22 L 440 16 Z" fill="#0C1F12" />
+    <text x="12" y="15" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#39FF14">🧪 04. THE ANOMALY LAB</text>
+    <rect x="330" y="3" width="98" height="16" rx="3" fill="#14381C" />
+    <text x="340" y="14" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700" fill="#39FF14">● EXPERIMENTAL</text>
+    
+    <g transform="translate(14, 40)" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#E2E8F0">
+      <text y="0" font-weight="700">Rogue Prototypes &amp; 3 AM Breakthroughs</text>
+      <text y="18" fill="#94A3B8">• High-risk experiments that redefine the possible</text>
+      <text y="36" fill="#39FF14" font-weight="700">STATUS: PROTOCOLS COMPILING</text>
+    </g>
+  </g>
+
+  <!-- ================= TACTICAL ARSENAL 2-COLUMN TOUCH GRID ================= -->
+  <g transform="translate(20, 475)">
+    <rect width="440" height="225" rx="8" fill="#070310" stroke="#251642" stroke-width="1.2" />
+    <text x="16" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#00F0FF">
+      TACTICAL WEAPON LOADOUT // TECH STACK
+    </text>
+
+    <!-- Row 1 -->
+    <g transform="translate(16, 40)">
+      <rect x="0" y="0" width="195" height="32" rx="4" fill="#120826" stroke="#00F0FF" stroke-width="0.8" />
+      <text x="12" y="20" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#00F0FF">🐍 Python / PyTorch</text>
+
+      <rect x="210" y="0" width="195" height="32" rx="4" fill="#120826" stroke="#39FF14" stroke-width="0.8" />
+      <text x="222" y="20" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#39FF14">🎙️ LiveKit / WebRTC</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(16, 82)">
+      <rect x="0" y="0" width="195" height="32" rx="4" fill="#120826" stroke="#3B82F6" stroke-width="0.8" />
+      <text x="12" y="20" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#60A5FA">⚡ FastAPI [Async]</text>
+
+      <rect x="210" y="0" width="195" height="32" rx="4" fill="#120826" stroke="#38BDF8" stroke-width="0.8" />
+      <text x="222" y="20" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38BDF8">🐳 Docker &amp; GHCR</text>
+    </g>
+
+    <!-- Row 3 -->
+    <g transform="translate(16, 124)">
+      <rect x="0" y="0" width="195" height="32" rx="4" fill="#120826" stroke="#FACC15" stroke-width="0.8" />
+      <text x="12" y="20" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#FACC15">🐧 Linux [Root Opt]</text>
+
+      <rect x="210" y="0" width="195" height="32" rx="4" fill="#120826" stroke="#EC4899" stroke-width="0.8" />
+      <text x="222" y="20" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#F472B6">🔊 Maya-1 Synth</text>
+    </g>
+
+    <!-- Row 4 -->
+    <g transform="translate(16, 166)">
+      <rect x="0" y="0" width="195" height="32" rx="4" fill="#120826" stroke="#38BDF8" stroke-width="0.8" />
+      <text x="12" y="20" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38BDF8">🔷 TypeScript / React</text>
+
+      <rect x="210" y="0" width="195" height="32" rx="4" fill="#120826" stroke="#A855F7" stroke-width="0.8" />
+      <text x="222" y="20" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#D8B4FE">🧠 Agent Swarms</text>
+    </g>
+  </g>
+
+  <!-- Bottom Divider -->
+  <line x1="0" y1="720" x2="480" y2="720" stroke="#2B144E" stroke-width="1" />
+</svg>

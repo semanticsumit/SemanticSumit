@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 170" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="f-s-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0602" />
+      <stop offset="50%" stop-color="#1A0D04" />
+      <stop offset="100%" stop-color="#080301" />
+    </linearGradient>
+
+    <linearGradient id="sun-grad-s" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#78350F" />
+    </linearGradient>
+
+    <linearGradient id="f-laser-beam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0" />
+      <stop offset="60%" stop-color="#D97706" stop-opacity="0.15" />
+      <stop offset="90%" stop-color="#F59E0B" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#FBBF24" stop-opacity="0.85" />
+    </linearGradient>
+
+    <filter id="f-s-glow">
+      <feGaussianBlur stdDeviation="4" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <pattern id="f-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#3D200A" stroke-width="0.5" stroke-opacity="0.25" />
+    </pattern>
+
+    <style>
+      @keyframes globalScanFooter {
+        0%, 88.8% { transform: translateY(-30px); opacity: 0; }
+        88.9% { transform: translateY(-10px); opacity: 1; }
+        98.5% { transform: translateY(145px); opacity: 1; }
+        100.0% { transform: translateY(170px); opacity: 0; }
+      }
+      .global-scan-beam-footer { animation: globalScanFooter 8s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Frame: Flat top, rounded bottom -->
+  <path d="M 0 0 L 1200 0 L 1200 156 Q 1200 170 1186 170 L 14 170 Q 0 170 0 156 Z" fill="url(#f-s-bg)" stroke="#F59E0B" stroke-width="1.8" />
+  <path d="M 0 0 L 1200 0 L 1200 156 Q 1200 170 1186 170 L 14 170 Q 0 170 0 156 Z" fill="url(#f-grid)" />
+
+  <!-- Sliced Sun Center Horizon -->
+  <g transform="translate(600, 118)">
+    <circle cx="0" cy="5" r="46" fill="url(#sun-grad-s)" opacity="0.4" filter="url(#f-s-glow)" />
+    <!-- Horizontal scan cut lines across lower sun - cleanly below copyright badge -->
+    <line x1="-38" y1="27" x2="38" y2="27" stroke="#0E0602" stroke-width="2.5" />
+    <line x1="-30" y1="36" x2="30" y2="36" stroke="#0E0602" stroke-width="3" />
+    <line x1="-20" y1="44" x2="20" y2="44" stroke="#0E0602" stroke-width="3.5" />
+  </g>
+
+  <!-- PHILOSOPHY QUOTE & COMMAND -->
+  <g transform="translate(600, 44)" text-anchor="middle">
+    <!-- Quote -->
+    <text font-family="'JetBrains Mono', monospace" font-size="13" font-style="italic" fill="#FDE68A" letter-spacing="0.5">
+      "Creativity is not decoration. It's finding an unreasonable possibility nobody bothered to look for."
+    </text>
+
+    <!-- Terminal Command -->
+    <g transform="translate(0, 40)">
+      <rect x="-240" y="-16" width="480" height="30" rx="15" fill="#140702" stroke="#F59E0B" stroke-width="1.2" />
+      <text y="3" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#FBBF24" letter-spacing="1">
+        sudo chmod +x /universe/reality &amp;&amp; ./make_it_epic.sh
+      </text>
+    </g>
+
+    <!-- Copyright Horizon Badge - High Visibility -->
+    <g transform="translate(0, 88)">
+      <rect x="-120" y="-12" width="240" height="24" rx="12" fill="#0E0602" fill-opacity="0.92" stroke="#F59E0B" stroke-width="1" />
+      <text y="4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#FDE68A" letter-spacing="1.8">
+        © 2026 SEMANTICSUMIT
+      </text>
+    </g>
+  </g>
+
+  <!-- Global Laser Scanline Beam Segment (88.9% to 100.0%) -->
+  <g class="global-scan-beam-footer" pointer-events="none">
+    <rect width="1200" height="28" fill="url(#f-laser-beam)" />
+    <line x1="0" y1="28" x2="1200" y2="28" stroke="#FBBF24" stroke-width="2" filter="url(#f-s-glow)" />
+    <line x1="0" y1="27" x2="1200" y2="27" stroke="#FFFFFF" stroke-width="0.8" />
+  </g>
+</svg>

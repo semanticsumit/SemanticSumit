@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 45" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="hdr-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0E0602" />
+      <stop offset="50%" stop-color="#1A0D04" />
+      <stop offset="100%" stop-color="#080301" />
+    </linearGradient>
+
+    <linearGradient id="hdr-laser-beam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0" />
+      <stop offset="60%" stop-color="#D97706" stop-opacity="0.15" />
+      <stop offset="90%" stop-color="#F59E0B" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#FBBF24" stop-opacity="0.85" />
+    </linearGradient>
+
+    <filter id="hdr-glow">
+      <feGaussianBlur stdDeviation="3" result="b" />
+      <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+    </filter>
+
+    <style>
+      @keyframes globalScanHdr {
+        0%, 23.4% { transform: translateY(-25px); opacity: 0; }
+        23.5% { transform: translateY(-15px); opacity: 1; }
+        26.0% { transform: translateY(35px); opacity: 1; }
+        26.4% { transform: translateY(45px); opacity: 0; }
+        26.5%, 100% { transform: translateY(-25px); opacity: 0; }
+      }
+      .global-scan-beam-hdr { animation: globalScanHdr 8s linear infinite; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="45" fill="url(#hdr-bg)" stroke="#F59E0B" stroke-width="1.2" />
+
+  <g transform="translate(30, 27)">
+    <circle cx="0" cy="-4" r="4" fill="#FBBF24" />
+    <text x="14" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#FBBF24" letter-spacing="1.5">
+      CORE EXPERTISE · WHAT I BUILD &amp; SHIP
+    </text>
+    <text x="1140" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#D97706" letter-spacing="0.8">
+      AI SYSTEMS · REAL-TIME AUDIO · DISTRIBUTED INFRA · 0➔1 R&amp;D
+    </text>
+  </g>
+
+  <!-- Global Laser Scanline Beam Segment (23.5% to 26.4%) -->
+  <g class="global-scan-beam-hdr" pointer-events="none">
+    <rect width="1200" height="20" fill="url(#hdr-laser-beam)" />
+    <line x1="0" y1="20" x2="1200" y2="20" stroke="#FBBF24" stroke-width="2" filter="url(#hdr-glow)" />
+    <line x1="0" y1="19" x2="1200" y2="19" stroke="#FFFFFF" stroke-width="0.8" />
+  </g>
+</svg>

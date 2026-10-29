@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="bg-02" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05030D" />
+      <stop offset="50%" stop-color="#0E081F" />
+      <stop offset="100%" stop-color="#04020A" />
+    </linearGradient>
+
+    <linearGradient id="avatar-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+
+    <filter id="glow-02" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <pattern id="grid-02" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="#23123D" stroke-width="0.6" stroke-opacity="0.4" />
+    </pattern>
+
+    <style>
+      @keyframes pulseBorder {
+        0%, 100% { stroke-opacity: 0.9; }
+        50% { stroke-opacity: 0.4; }
+      }
+      @keyframes eyeBlink {
+        0%, 96%, 100% { opacity: 1; }
+        98% { opacity: 0.1; }
+      }
+      .pulse-line { animation: pulseBorder 2.5s infinite; }
+      .blink { animation: eyeBlink 4s infinite; }
+    </style>
+  </defs>
+
+  <!-- Frame -->
+  <rect width="1200" height="300" rx="14" fill="url(#bg-02)" stroke="#2C164F" stroke-width="1.8" />
+  <rect width="1200" height="300" rx="14" fill="url(#grid-02)" />
+
+  <!-- ================= LEFT: OPERATOR AVATAR HUD ================= -->
+  <g transform="translate(45, 30)">
+    <!-- Avatar Chassis -->
+    <rect width="320" height="240" rx="10" fill="#090514" stroke="#7928CA" stroke-width="1.5" class="pulse-line" />
+    
+    <!-- Header Tab -->
+    <rect width="320" height="24" rx="10" fill="#14092A" />
+    <path d="M 0 18 L 0 24 L 320 24 L 320 18 Z" fill="#14092A" />
+    <circle cx="16" cy="12" r="3.5" fill="#EF4444" />
+    <circle cx="28" cy="12" r="3.5" fill="#F59E0B" />
+    <circle cx="40" cy="12" r="3.5" fill="#10B981" />
+    <text x="56" y="16" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#00F0FF">
+      BIO_TELEMETRY // ID: 0x7F
+    </text>
+
+    <!-- Center Avatar Cyber Hologram -->
+    <g transform="translate(160, 105)">
+      <!-- Cyber Shield / Hexagon -->
+      <polygon points="0,-55 48,-27 48,27 0,55 -48,27 -48,-27" fill="#110724" stroke="#00F0FF" stroke-width="1.8" filter="url(#glow-02)" />
+      <!-- Inner Cyber Visor / Face -->
+      <path d="M -26 -10 L 26 -10 L 18 12 L -18 12 Z" fill="#00F0FF" opacity="0.8" class="blink" />
+      <line x1="-32" y1="-10" x2="32" y2="-10" stroke="#EC4899" stroke-width="2" />
+      <!-- Scanning Grid over Face -->
+      <line x1="-20" y1="2" x2="20" y2="2" stroke="#FFFFFF" stroke-width="1" opacity="0.6" />
+      <!-- Circular Ring around Hex -->
+      <circle cx="0" cy="0" r="62" fill="none" stroke="#A855F7" stroke-width="1" stroke-dasharray="8,6" />
+    </g>
+
+    <!-- Bottom Operator Badges -->
+    <rect x="25" y="185" width="270" height="26" rx="4" fill="#160830" stroke="#39FF14" stroke-width="1" />
+    <text x="160" y="202" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#39FF14">
+      OPERATOR: SUMIT // OVERCLOCKED
+    </text>
+
+    <text x="160" y="226" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8">
+      STATUS: ACTIVE IN THE LAB &amp; SHIPPING
+    </text>
+  </g>
+
+  <!-- ================= RIGHT: THE ARCHITECT DOSSIER ================= -->
+  <g transform="translate(400, 35)">
+    <!-- Header -->
+    <g transform="translate(0, 16)">
+      <text font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#39FF14" letter-spacing="1.5">
+        ⚡ IDENTITY VERIFIED // CLEARANCE: ROOT_ARCHITECT
+      </text>
+      <line x1="0" y1="24" x2="740" y2="24" stroke="#251642" stroke-width="1.2" />
+    </g>
+
+    <!-- Master Philosophy Quote -->
+    <g transform="translate(0, 68)">
+      <rect x="0" y="-12" width="740" height="34" rx="4" fill="#0C071C" stroke="#7928CA" stroke-width="0.8" />
+      <text x="14" y="10" font-family="'JetBrains Mono', monospace" font-size="12" font-style="italic" fill="#E2E8F0">
+        "Creativity is not decoration. It is finding an unreasonable possibility nobody bothered to look for."
+      </text>
+    </g>
+
+    <!-- The 3 Pillars -->
+    <g transform="translate(0, 126)" font-family="'JetBrains Mono', monospace" font-size="11.5">
+      <!-- Pillar 1 -->
+      <g transform="translate(0, 0)">
+        <circle cx="6" cy="-4" r="3" fill="#00F0FF" />
+        <text x="18" y="0" font-weight="700" fill="#00F0FF">🎙️ REAL-TIME STREAMING VOICE AI :</text>
+        <text x="290" y="0" fill="#E2E8F0">Sub-100ms full-duplex conversational agents with zero buffer.</text>
+      </g>
+      <!-- Pillar 2 -->
+      <g transform="translate(0, 26)">
+        <circle cx="6" cy="-4" r="3" fill="#A855F7" />
+        <text x="18" y="0" font-weight="700" fill="#D8B4FE">🧠 AUTONOMOUS AGENT SWARMS      :</text>
+        <text x="290" y="0" fill="#E2E8F0">Self-reflecting cognitive tools, vector memory RAG, dynamic handoffs.</text>
+      </g>
+      <!-- Pillar 3 -->
+      <g transform="translate(0, 52)">
+        <circle cx="6" cy="-4" r="3" fill="#EC4899" />
+        <text x="18" y="0" font-weight="700" fill="#F472B6">⚡ DISTRIBUTED QUANTUM INFRA    :</text>
+        <text x="290" y="0" fill="#E2E8F0">High-concurrency FastAPI, WebRTC streams, Dockerized micro-engines.</text>
+      </g>
+    </g>
+
+    <!-- Bottom Mission Callout -->
+    <g transform="translate(0, 218)">
+      <rect width="740" height="32" rx="4" fill="#090516" stroke="#251642" stroke-width="1" />
+      <text x="14" y="20" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8">
+        FAVOURITE GENRE: <tspan fill="#39FF14" font-weight="700">Taking a project that begins with "Hear me out..." and deploying it before morning.</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

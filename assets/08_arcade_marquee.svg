@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="marquee-bg-08" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#190634" />
+      <stop offset="25%" stop-color="#3B0764" />
+      <stop offset="50%" stop-color="#701A75" />
+      <stop offset="75%" stop-color="#3B0764" />
+      <stop offset="100%" stop-color="#190634" />
+    </linearGradient>
+
+    <linearGradient id="text-neon-08" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#F43F5E" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+
+    <filter id="m-glow-08">
+      <feGaussianBlur stdDeviation="3" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes blinkLights {
+        0%, 100% { opacity: 1; fill: #00F0FF; }
+        33% { opacity: 0.3; fill: #EC4899; }
+        66% { opacity: 1; fill: #FBBF24; }
+      }
+      @keyframes flashText { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0.2; } }
+      .bulb-1 { animation: blinkLights 1.5s infinite; }
+      .bulb-2 { animation: blinkLights 1.5s infinite 0.5s; }
+      .bulb-3 { animation: blinkLights 1.5s infinite 1s; }
+      .flash { animation: flashText 1.2s infinite; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="100" rx="10" fill="url(#marquee-bg-08)" stroke="#EC4899" stroke-width="2" />
+
+  <!-- Top Bulbs -->
+  <g fill="#00F0FF">
+    <circle cx="50" cy="14" r="3.5" class="bulb-1" />
+    <circle cx="150" cy="14" r="3.5" class="bulb-2" />
+    <circle cx="250" cy="14" r="3.5" class="bulb-3" />
+    <circle cx="350" cy="14" r="3.5" class="bulb-1" />
+    <circle cx="450" cy="14" r="3.5" class="bulb-2" />
+    <circle cx="550" cy="14" r="3.5" class="bulb-3" />
+    <circle cx="650" cy="14" r="3.5" class="bulb-1" />
+    <circle cx="750" cy="14" r="3.5" class="bulb-2" />
+    <circle cx="850" cy="14" r="3.5" class="bulb-3" />
+    <circle cx="950" cy="14" r="3.5" class="bulb-1" />
+    <circle cx="1050" cy="14" r="3.5" class="bulb-2" />
+    <circle cx="1150" cy="14" r="3.5" class="bulb-3" />
+
+    <!-- Bottom Bulbs -->
+    <circle cx="50" cy="86" r="3.5" class="bulb-3" />
+    <circle cx="150" cy="86" r="3.5" class="bulb-1" />
+    <circle cx="250" cy="86" r="3.5" class="bulb-2" />
+    <circle cx="350" cy="86" r="3.5" class="bulb-3" />
+    <circle cx="450" cy="86" r="3.5" class="bulb-1" />
+    <circle cx="550" cy="86" r="3.5" class="bulb-2" />
+    <circle cx="650" cy="86" r="3.5" class="bulb-3" />
+    <circle cx="750" cy="86" r="3.5" class="bulb-1" />
+    <circle cx="850" cy="86" r="3.5" class="bulb-2" />
+    <circle cx="950" cy="86" r="3.5" class="bulb-3" />
+    <circle cx="1050" cy="86" r="3.5" class="bulb-1" />
+    <circle cx="1150" cy="86" r="3.5" class="bulb-2" />
+  </g>
+
+  <!-- Marquee Text -->
+  <text x="600" y="48" text-anchor="middle" font-family="'JetBrains Mono', 'Impact', sans-serif" font-size="22" font-weight="900" fill="url(#text-neon-08)" filter="url(#m-glow-08)" letter-spacing="4">
+    🕹️ NEURAL CONTRIBUTION MATRIX // LEVEL 99 // ARCADE CHASSIS 🕹️
+  </text>
+
+  <text x="600" y="72" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#39FF14" class="flash" letter-spacing="2">
+    INSERT COIN TO PROLONG SNAKE HUNGER // WATCH COMMITS GET CONSUMED
+  </text>
+</svg>

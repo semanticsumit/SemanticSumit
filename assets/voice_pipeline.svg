@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 290" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="vp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07060E" />
+      <stop offset="50%" stop-color="#0D091B" />
+      <stop offset="100%" stop-color="#06050C" />
+    </linearGradient>
+
+    <linearGradient id="neon-cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+
+    <linearGradient id="neon-purple-pink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <linearGradient id="beam-pulse" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#00F0FF" stop-opacity="1" />
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0.1" />
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <pattern id="micro-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#251642" stroke-width="0.5" stroke-opacity="0.4" />
+    </pattern>
+
+    <style>
+      @keyframes eqBar1 { 0%, 100% { height: 6px; y: 22px; } 50% { height: 26px; y: 2px; } }
+      @keyframes eqBar2 { 0%, 100% { height: 18px; y: 10px; } 50% { height: 8px; y: 20px; } }
+      @keyframes eqBar3 { 0%, 100% { height: 10px; y: 18px; } 50% { height: 28px; y: 0px; } }
+      @keyframes eqBar4 { 0%, 100% { height: 24px; y: 4px; } 50% { height: 12px; y: 16px; } }
+      @keyframes eqBar5 { 0%, 100% { height: 8px; y: 20px; } 50% { height: 22px; y: 6px; } }
+
+      @keyframes packetFlow {
+        0% { stroke-dashoffset: 120; }
+        100% { stroke-dashoffset: 0; }
+      }
+
+      @keyframes photonMove1 {
+        0% { transform: translateX(0px); opacity: 0; }
+        15% { opacity: 1; }
+        85% { opacity: 1; }
+        100% { transform: translateX(110px); opacity: 0; }
+      }
+
+      @keyframes pulseHalo {
+        0%, 100% { opacity: 0.3; transform: scale(0.95); }
+        50% { opacity: 0.9; transform: scale(1.05); }
+      }
+
+      @keyframes ledBlink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
+
+      .b1 { animation: eqBar1 0.75s ease-in-out infinite; }
+      .b2 { animation: eqBar2 0.85s ease-in-out infinite; }
+      .b3 { animation: eqBar3 0.65s ease-in-out infinite; }
+      .b4 { animation: eqBar4 0.95s ease-in-out infinite; }
+      .b5 { animation: eqBar5 0.70s ease-in-out infinite; }
+
+      .conduit-flow {
+        stroke-dasharray: 6, 6;
+        animation: packetFlow 1.2s linear infinite;
+      }
+      .photon {
+        animation: photonMove1 1.4s ease-in-out infinite;
+      }
+      .halo {
+        animation: pulseHalo 2s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .led {
+        animation: ledBlink 1.2s infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect width="1000" height="290" rx="12" fill="url(#vp-bg)" stroke="#2B184C" stroke-width="1.5" />
+  <rect width="1000" height="290" rx="12" fill="url(#micro-grid)" />
+
+  <!-- Top Decorative Header -->
+  <g transform="translate(32, 28)">
+    <rect x="0" y="-8" width="10" height="10" fill="#39FF14" class="led" />
+    <text x="18" y="1" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="12" font-weight="700" fill="#00F0FF" letter-spacing="1.5">
+      REAL-TIME VOICE AI STREAMING PIPELINE ARCHITECTURE
+    </text>
+    <text x="590" y="1" font-family="'JetBrains Mono', 'Courier New', monospace" font-size="11" fill="#A855F7" letter-spacing="1">
+      PROTOCOL: WEBRTC // FULL-DUPLEX // ULTRA-LOW LATENCY
+    </text>
+    <rect x="900" y="-10" width="68" height="18" rx="4" fill="#140A29" stroke="#39FF14" stroke-width="0.8" />
+    <text x="908" y="3" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#39FF14">● ONLINE</text>
+    <line x1="0" y1="12" x2="936" y2="12" stroke="#25173E" stroke-width="1" />
+  </g>
+
+  <!-- CONNECTING LASER CONDUITS -->
+  <g stroke="#00F0FF" stroke-width="2" opacity="0.6">
+    <!-- Node 1 -> Node 2 -->
+    <line x1="225" y1="130" x2="335" y2="130" stroke="#00F0FF" stroke-width="2" class="conduit-flow" />
+    <!-- Node 2 -> Node 3 -->
+    <line x1="475" y1="130" x2="585" y2="130" stroke="#A855F7" stroke-width="2" class="conduit-flow" />
+    <!-- Node 3 -> Node 4 -->
+    <line x1="725" y1="130" x2="835" y2="130" stroke="#EC4899" stroke-width="2" class="conduit-flow" />
+  </g>
+
+  <!-- Glowing Photon Packets Flying Across Channels -->
+  <g transform="translate(225, 130)">
+    <circle cx="0" cy="0" r="4" fill="#00F0FF" class="photon" filter="url(#glow)" />
+  </g>
+  <g transform="translate(475, 130)">
+    <circle cx="0" cy="0" r="4" fill="#A855F7" class="photon" filter="url(#glow)" />
+  </g>
+  <g transform="translate(725, 130)">
+    <circle cx="0" cy="0" r="4" fill="#EC4899" class="photon" filter="url(#glow)" />
+  </g>
+
+  <!-- ================= NODE 1: WEBRTC AUDIO INGEST ================= -->
+  <g transform="translate(85, 65)">
+    <rect width="140" height="130" rx="8" fill="#0C0A1A" stroke="#00F0FF" stroke-width="1.2" />
+    <rect width="140" height="24" rx="8" fill="#141029" />
+    <path d="M 0 18 L 0 24 L 140 24 L 140 18 Z" fill="#141029" />
+    <text x="14" y="16" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#00F0FF">01 // INGEST</text>
+
+    <!-- Animated Equalizer Bars -->
+    <g transform="translate(26, 40)" fill="#00F0FF" filter="url(#glow)">
+      <rect x="0"  y="15" width="5" height="15" rx="2" class="b1" />
+      <rect x="10" y="8"  width="5" height="22" rx="2" class="b2" />
+      <rect x="20" y="12" width="5" height="18" rx="2" class="b3" />
+      <rect x="30" y="5"  width="5" height="25" rx="2" class="b4" />
+      <rect x="40" y="14" width="5" height="16" rx="2" class="b5" />
+      <rect x="50" y="6"  width="5" height="24" rx="2" class="b2" />
+      <rect x="60" y="10" width="5" height="20" rx="2" class="b1" />
+      <rect x="70" y="16" width="5" height="14" rx="2" class="b3" />
+      <rect x="80" y="4"  width="5" height="26" rx="2" class="b4" />
+    </g>
+
+    <text x="12" y="96" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#F8FAFC">WebRTC Stream</text>
+    <text x="12" y="112" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8">Opus · 48kHz Stereo</text>
+    
+    <!-- Latency Tag -->
+    <rect x="12" y="136" width="116" height="18" rx="3" fill="#052E16" stroke="#10B981" stroke-width="0.8" />
+    <text x="24" y="149" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#34D399">INGEST: ~12ms</text>
+  </g>
+
+  <!-- ================= NODE 2: STREAMING STT ================= -->
+  <g transform="translate(335, 65)">
+    <rect width="140" height="130" rx="8" fill="#0C0A1A" stroke="#3B82F6" stroke-width="1.2" />
+    <rect width="140" height="24" rx="8" fill="#141432" />
+    <path d="M 0 18 L 0 24 L 140 24 L 140 18 Z" fill="#141432" />
+    <text x="14" y="16" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#60A5FA">02 // STT CORE</text>
+
+    <!-- Transcribing Matrix Animation -->
+    <g transform="translate(20, 36)" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="#60A5FA">
+      <text x="0" y="12">&gt; vad.detect: 0.98</text>
+      <text x="0" y="24">&gt; decode_chunk()</text>
+      <text x="0" y="36" fill="#39FF14">&gt; text: "Hear me out"</text>
+      <line x1="0" y1="42" x2="100" y2="42" stroke="#2563EB" stroke-width="0.8" stroke-dasharray="2,2" />
+    </g>
+
+    <text x="12" y="96" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#F8FAFC">Whisper Stream</text>
+    <text x="12" y="112" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8">VAD + Token Stream</text>
+
+    <!-- Latency Tag -->
+    <rect x="12" y="136" width="116" height="18" rx="3" fill="#172554" stroke="#3B82F6" stroke-width="0.8" />
+    <text x="26" y="149" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#60A5FA">TTFT: ~32ms</text>
+  </g>
+
+  <!-- ================= NODE 3: REASONING AGENT ================= -->
+  <g transform="translate(585, 65)">
+    <rect width="140" height="130" rx="8" fill="#0C0A1A" stroke="#A855F7" stroke-width="1.2" />
+    <rect width="140" height="24" rx="8" fill="#1E1036" />
+    <path d="M 0 18 L 0 24 L 140 24 L 140 18 Z" fill="#1E1036" />
+    <text x="14" y="16" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#C084FC">03 // LLM AGENT</text>
+
+    <!-- Neural Synapse Ring -->
+    <g transform="translate(70, 52)">
+      <circle cx="0" cy="0" r="18" fill="none" stroke="#A855F7" stroke-width="1.5" stroke-dasharray="4,2" />
+      <circle cx="0" cy="0" r="9" fill="#7928CA" class="halo" filter="url(#glow)" />
+      <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+      <!-- Radial dots -->
+      <circle cx="-16" cy="-8" r="2" fill="#EC4899" />
+      <circle cx="16" cy="8" r="2" fill="#00F0FF" />
+      <circle cx="8" cy="-15" r="2" fill="#39FF14" />
+    </g>
+
+    <text x="12" y="96" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#F8FAFC">Cognitive Loop</text>
+    <text x="12" y="112" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8">Tool Use + RAG Agent</text>
+
+    <!-- Latency Tag -->
+    <rect x="12" y="136" width="116" height="18" rx="3" fill="#3B0764" stroke="#A855F7" stroke-width="0.8" />
+    <text x="24" y="149" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#D8B4FE">LLM-TTFT: ~38ms</text>
+  </g>
+
+  <!-- ================= NODE 4: STREAMING TTS ENGINE ================= -->
+  <g transform="translate(835, 65)">
+    <rect width="140" height="130" rx="8" fill="#0C0A1A" stroke="#EC4899" stroke-width="1.2" />
+    <rect width="140" height="24" rx="8" fill="#280C20" />
+    <path d="M 0 18 L 0 24 L 140 24 L 140 18 Z" fill="#280C20" />
+    <text x="14" y="16" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#F472B6">04 // MAYA-1 TTS</text>
+
+    <!-- Synth Wave Output -->
+    <g transform="translate(18, 48)" stroke="#EC4899" stroke-width="1.8" fill="none" filter="url(#glow)">
+      <path d="M 0 12 Q 12 -4, 25 12 T 50 12 T 75 12 T 100 12" />
+    </g>
+
+    <text x="12" y="96" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#F8FAFC">Streaming Synth</text>
+    <text x="12" y="112" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8">Chunked Audio Gen</text>
+
+    <!-- Latency Tag -->
+    <rect x="12" y="136" width="116" height="18" rx="3" fill="#500724" stroke="#EC4899" stroke-width="0.8" />
+    <text x="26" y="149" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#F472B6">SYNTH: ~16ms</text>
+  </g>
+
+  <!-- ================= BOTTOM BENCHMARK HUD READOUT ================= -->
+  <g transform="translate(32, 235)">
+    <rect width="936" height="38" rx="6" fill="#0B0818" stroke="#251642" stroke-width="1" />
+    
+    <text x="20" y="24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#00F0FF">
+      ⚡ END-TO-END PIPELINE LATENCY:
+    </text>
+    <text x="235" y="24" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="800" fill="#39FF14">
+      ~96ms (GLASS-TO-GLASS)
+    </text>
+
+    <line x1="420" y1="8" x2="420" y2="30" stroke="#251642" stroke-width="1" />
+
+    <text x="440" y="24" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#94A3B8">
+      FRAME JITTER: <tspan fill="#F8FAFC" font-weight="700">&lt; 2ms</tspan>
+    </text>
+
+    <line x1="600" y1="8" x2="600" y2="30" stroke="#251642" stroke-width="1" />
+
+    <text x="620" y="24" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#94A3B8">
+      CHUNK BUFFER: <tspan fill="#F8FAFC" font-weight="700">0ms (ZERO BUFFER)</tspan>
+    </text>
+
+    <line x1="810" y1="8" x2="810" y2="30" stroke="#251642" stroke-width="1" />
+
+    <text x="830" y="24" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#39FF14" font-weight="700">
+      ● PRODUCTION GRADE
+    </text>
+  </g>
+</svg>

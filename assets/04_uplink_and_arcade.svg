@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="u-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05020B" />
+      <stop offset="50%" stop-color="#0E071F" />
+      <stop offset="100%" stop-color="#040209" />
+    </linearGradient>
+
+    <linearGradient id="sun-grad-04" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F43F5E" />
+      <stop offset="60%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+
+    <filter id="u-glow">
+      <feGaussianBlur stdDeviation="3.5" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Frame: Flat top, rounded bottom -->
+  <path d="M 0 0 L 1200 0 L 1200 346 Q 1200 360 1186 360 L 14 360 Q 0 360 0 346 Z" fill="url(#u-bg)" stroke="#2B144E" stroke-width="1.8" />
+
+  <!-- HEADER -->
+  <g transform="translate(48, 28)">
+    <text x="0" y="4" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800" fill="#EF4444" letter-spacing="1.5">
+      🚨 02:47 AM INCIDENT LOG &amp; QUANTUM TRANSMISSION RELAY
+    </text>
+    <text x="730" y="4" font-family="'JetBrains Mono', monospace" font-size="11" fill="#A855F7">
+      DIRECT COMMS ONLINE // BOLD VISIONS WELCOMED
+    </text>
+    <line x1="-10" y1="16" x2="1115" y2="16" stroke="#251642" stroke-width="1.2" />
+  </g>
+
+  <!-- ================= TOP: 02:47 AM CRASH LOG ================= -->
+  <g transform="translate(60, 52)">
+    <rect width="1080" height="95" rx="6" fill="#070310" stroke="#7928CA" stroke-width="1" />
+    
+    <g transform="translate(20, 24)" font-family="'JetBrains Mono', monospace" font-size="10.5">
+      <text y="0" fill="#39FF14" font-weight="700">+ [02:47 AM] IDEA DETECTED   : "What if voice agents answered before you finished asking?"</text>
+      <text y="18" fill="#EF4444">- [02:47 AM] SCOPE ESTIMATE  : "Should take about 45 minutes of quick tinkering."</text>
+      <text y="36" fill="#FBBF24">! [03:30 AM] REALITY CHECK   : 64 browser tabs open, CUDA compiling, green tea flowing...</text>
+      <text y="54" fill="#00F0FF" font-weight="800">+ [05:01 AM] OUTCOME         : Accidentally shaved 40ms off audio pipeline. STATUS: WE ARE SO BACK.</text>
+    </g>
+  </g>
+
+  <!-- ================= TRANSMISSION UPLINK PROMPT ================= -->
+  <g transform="translate(60, 172)">
+    <text font-family="'Inter', sans-serif" font-size="17" font-weight="900" fill="#FFFFFF" letter-spacing="0.5">
+      HAVE AN IMPOSSIBLE-SOUNDING PROJECT? A REAL-TIME VOICE AI CHALLENGE?
+    </text>
+    <text y="20" font-family="'JetBrains Mono', monospace" font-size="11.5" fill="#39FF14">
+      Or an idea that begins with "Hear me out, this might be crazy..."?
+    </text>
+  </g>
+
+  <!-- 4 DIRECT TRANSMISSION CHANNELS -->
+  <g transform="translate(60, 215)">
+    <!-- Channel 1: LinkedIn -->
+    <g transform="translate(0, 0)">
+      <rect width="255" height="52" rx="6" fill="#0C142A" stroke="#00F0FF" stroke-width="1.2" />
+      <text x="18" y="22" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#00F0FF">CHANNEL 01 // LINKEDIN</text>
+      <text x="18" y="38" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900" fill="#FFFFFF">TRANSMIT DIRECT ↗</text>
+    </g>
+
+    <!-- Channel 2: Email -->
+    <g transform="translate(275, 0)">
+      <rect width="255" height="52" rx="6" fill="#1C091C" stroke="#EC4899" stroke-width="1.2" />
+      <text x="18" y="22" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#EC4899">CHANNEL 02 // EMAIL</text>
+      <text x="18" y="38" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900" fill="#FFFFFF">DISPATCH PULSE ↗</text>
+    </g>
+
+    <!-- Channel 3: Instagram -->
+    <g transform="translate(550, 0)">
+      <rect width="255" height="52" rx="6" fill="#180A26" stroke="#A855F7" stroke-width="1.2" />
+      <text x="18" y="22" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#D8B4FE">CHANNEL 03 // INSTAGRAM</text>
+      <text x="18" y="38" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900" fill="#FFFFFF">ENTER SIDE QUEST ↗</text>
+    </g>
+
+    <!-- Channel 4: GitHub -->
+    <g transform="translate(825, 0)">
+      <rect width="255" height="52" rx="6" fill="#071A12" stroke="#39FF14" stroke-width="1.2" />
+      <text x="18" y="22" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#39FF14">CHANNEL 04 // GITHUB</text>
+      <text x="18" y="38" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="900" fill="#FFFFFF">INSPECT REPOS ↗</text>
+    </g>
+  </g>
+
+  <!-- ================= SYNTHWAVE HORIZON BOTTOM FOOTER ================= -->
+  <g transform="translate(600, 310)" text-anchor="middle">
+    <!-- Sliced Sun Center -->
+    <circle cx="0" cy="50" r="45" fill="url(#sun-grad-04)" opacity="0.4" filter="url(#u-glow)" />
+    
+    <text font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="800" fill="#39FF14" letter-spacing="1">
+      sudo chmod +x /universe/reality &amp;&amp; ./make_it_epic.sh
+    </text>
+    <text y="20" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#71717A" letter-spacing="1.5">
+      // © 2026 SEMANTICSUMIT · ENGINEERED FOR MINDS THAT REFUSE TO BE BORING //
+    </text>
+  </g>
+</svg>

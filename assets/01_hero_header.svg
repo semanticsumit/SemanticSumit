@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="h-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060310" />
+      <stop offset="50%" stop-color="#0D071F" />
+      <stop offset="100%" stop-color="#05020D" />
+    </linearGradient>
+
+    <linearGradient id="h-title" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="40%" stop-color="#38BDF8" />
+      <stop offset="75%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <linearGradient id="laser-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#00F0FF" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="h-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="b" />
+      <feMerge>
+        <feMergeNode in="b" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <pattern id="h-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#251242" stroke-width="0.7" stroke-opacity="0.35" />
+    </pattern>
+
+    <style>
+      @keyframes radarSweep { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      @keyframes ringSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      @keyframes pulseLive { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+      @keyframes type1 { 0%, 5% { opacity: 0; } 15%, 100% { opacity: 1; } }
+      @keyframes type2 { 0%, 35% { opacity: 0; } 45%, 100% { opacity: 1; } }
+      @keyframes type3 { 0%, 65% { opacity: 0; } 75%, 100% { opacity: 1; } }
+      @keyframes cursorBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+      .radar-arm { transform-origin: 1040px 175px; animation: radarSweep 4s linear infinite; }
+      .ring-fast { transform-origin: 1040px 175px; animation: ringSpin 12s linear infinite; }
+      .live-led { animation: pulseLive 1.2s infinite; }
+      .cursor { animation: cursorBlink 0.9s infinite; }
+    </style>
+  </defs>
+
+  <!-- Frame: Top rounded, bottom flat for seamless docking -->
+  <path d="M 0 14 Q 0 0 14 0 L 1186 0 Q 1200 0 1200 14 L 1200 380 L 0 380 Z" fill="url(#h-bg)" stroke="#2B144E" stroke-width="1.8" />
+  <path d="M 0 14 Q 0 0 14 0 L 1186 0 Q 1200 0 1200 14 L 1200 380 L 0 380 Z" fill="url(#h-grid)" />
+
+  <!-- TOP SYSTEM HUD BAR -->
+  <g transform="translate(48, 28)">
+    <circle cx="0" cy="0" r="4.5" fill="#39FF14" class="live-led" />
+    <text x="14" y="4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#39FF14" letter-spacing="1">
+      ● MAYA-1 STREAMING ENGINE: ONLINE
+    </text>
+
+    <text x="360" y="4" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#00F0FF" letter-spacing="1">
+      LATENCY: 98ms GLASS-TO-GLASS
+    </text>
+
+    <text x="660" y="4" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#A855F7" letter-spacing="1">
+      FULL-DUPLEX WEBRTC
+    </text>
+
+    <text x="940" y="4" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#94A3B8" letter-spacing="1">
+      INDIA // 28.61°N 77.20°E
+    </text>
+    <line x1="-10" y1="14" x2="1115" y2="14" stroke="url(#laser-line)" stroke-width="1.2" />
+  </g>
+
+  <!-- MAIN OPERATOR TITLE -->
+  <g transform="translate(60, 85)">
+    <!-- Big Glowing Name -->
+    <text x="0" y="38" font-family="'Inter', -apple-system, sans-serif" font-size="52" font-weight="900" fill="url(#h-title)" filter="url(#h-glow)" letter-spacing="3">
+      SEMANTIC SUMIT
+    </text>
+
+    <!-- Clean Tagline -->
+    <text x="2" y="74" font-family="'JetBrains Mono', monospace" font-size="15" font-weight="700" fill="#F8FAFC" letter-spacing="0.5">
+      Architect of Real-Time Voice AI &amp; Autonomous Cognitive Swarms
+    </text>
+
+    <text x="2" y="98" font-family="'JetBrains Mono', monospace" font-size="12" fill="#94A3B8">
+      Taking impossible-sounding ideas and turning them into production code before morning.
+    </text>
+
+    <!-- 4 Clean Pill Badges -->
+    <g transform="translate(2, 118)">
+      <rect x="0" y="0" width="170" height="26" rx="13" fill="#0C071C" stroke="#00F0FF" stroke-width="1" />
+      <text x="14" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#00F0FF">🎙️ Voice AI Specialist</text>
+
+      <rect x="182" y="0" width="168" height="26" rx="13" fill="#0C071C" stroke="#39FF14" stroke-width="1" />
+      <text x="196" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#39FF14">⚡ &lt; 98ms Latency</text>
+
+      <rect x="362" y="0" width="180" height="26" rx="13" fill="#0C071C" stroke="#A855F7" stroke-width="1" />
+      <text x="376" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#D8B4FE">🧠 Autonomous Swarms</text>
+
+      <rect x="554" y="0" width="160" height="26" rx="13" fill="#0C071C" stroke="#EC4899" stroke-width="1" />
+      <text x="568" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#F472B6">🚀 Production Ready</text>
+    </g>
+  </g>
+
+  <!-- CLEAN LIVE TERMINAL -->
+  <g transform="translate(60, 250)">
+    <rect width="840" height="105" rx="8" fill="#070410" stroke="#251642" stroke-width="1.2" />
+    <!-- Titlebar -->
+    <rect width="840" height="24" rx="8" fill="#110822" />
+    <path d="M 0 18 L 0 24 L 840 24 L 840 18 Z" fill="#110822" />
+    <circle cx="14" cy="12" r="3.5" fill="#EF4444" />
+    <circle cx="26" cy="12" r="3.5" fill="#F59E0B" />
+    <circle cx="38" cy="12" r="3.5" fill="#10B981" />
+    <text x="54" y="16" font-family="'JetBrains Mono', monospace" font-size="10" fill="#71717A">terminal.sh — sumit@cortex</text>
+
+    <!-- Typing Output -->
+    <g transform="translate(18, 45)" font-family="'JetBrains Mono', monospace" font-size="11">
+      <g style="animation: type1 8s infinite;">
+        <text y="0" fill="#39FF14" font-weight="700">sumit@cortex:~$</text>
+        <text x="135" y="0" fill="#F8FAFC">./stream_voice_orchestrator --engine=maya-1 --latency=sub_100ms</text>
+      </g>
+      <g style="animation: type2 8s infinite;" transform="translate(0, 20)">
+        <text y="0" fill="#00F0FF">[READY]</text>
+        <text x="65" y="0" fill="#E2E8F0">WebRTC Opus channel locked (48kHz Stereo) · Pipeline: STT 32ms | LLM 38ms | TTS 16ms</text>
+      </g>
+      <g style="animation: type3 8s infinite;" transform="translate(0, 40)">
+        <text y="0" fill="#A855F7">"Creativity is finding an unreasonable possibility nobody bothered to look for."</text>
+        <rect x="645" y="-10" width="8" height="13" fill="#00F0FF" class="cursor" />
+      </g>
+    </g>
+  </g>
+
+  <!-- RIGHT SIDE: HOLOGRAPHIC QUANTUM RADAR -->
+  <g transform="translate(1040, 175)">
+    <circle cx="0" cy="0" r="80" fill="#0A0518" stroke="#251642" stroke-width="1.2" />
+    <circle cx="0" cy="0" r="62" fill="none" stroke="#311854" stroke-width="1" stroke-dasharray="4,4" />
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#00F0FF" stroke-width="0.8" opacity="0.4" />
+
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#00F0FF" stroke-width="1.5" stroke-dasharray="25, 45, 15, 30" class="ring-fast" />
+
+    <g class="radar-arm">
+      <line x1="0" y1="0" x2="0" y2="-80" stroke="#00F0FF" stroke-width="2" filter="url(#h-glow)" />
+      <path d="M 0 0 L 28 -74 A 80 80 0 0 0 0 -80 Z" fill="#00F0FF" opacity="0.2" />
+    </g>
+
+    <circle cx="0" cy="0" r="7" fill="#00F0FF" filter="url(#h-glow)" />
+    <circle cx="0" cy="0" r="2.5" fill="#FFFFFF" />
+    <circle cx="35" cy="-28" r="3.5" fill="#39FF14" />
+    <circle cx="-42" cy="35" r="3" fill="#EC4899" />
+
+    <!-- Clean Telemetry Below -->
+    <text x="0" y="105" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#39FF14">
+      CORE LOAD: 99.8% OC
+    </text>
+    <text x="0" y="122" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#00F0FF">
+      STREAM: 98ms ACTIVE
+    </text>
+  </g>
+
+  <!-- Bottom Laser Divider for Seamless Docking -->
+  <line x1="0" y1="380" x2="1200" y2="380" stroke="#2B144E" stroke-width="1" />
+</svg>

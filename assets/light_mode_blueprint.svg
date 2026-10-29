@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Blueprint Cyan Gradients -->
+    <linearGradient id="cad-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E3A5E" />
+      <stop offset="50%" stop-color="#0A2D4A" />
+      <stop offset="100%" stop-color="#072036" />
+    </linearGradient>
+
+    <pattern id="cad-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#2563EB" stroke-width="0.5" stroke-opacity="0.35" />
+    </pattern>
+
+    <pattern id="cad-major-grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.5" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="460" rx="14" fill="url(#cad-bg)" stroke="#38BDF8" stroke-width="2" />
+  <rect width="1200" height="460" rx="14" fill="url(#cad-grid)" />
+  <rect width="1200" height="460" rx="14" fill="url(#cad-major-grid)" />
+
+  <!-- CAD Border with Technical Rulers -->
+  <g stroke="#38BDF8" stroke-width="1.2" opacity="0.8">
+    <rect x="25" y="25" width="1150" height="410" fill="none" stroke="#38BDF8" stroke-width="1.5" />
+    <!-- Technical Corner Crosses -->
+    <path d="M 15 25 L 35 25 M 25 15 L 25 35" />
+    <path d="M 1165 25 L 1185 25 M 1175 15 L 1175 35" />
+    <path d="M 15 435 L 35 435 M 25 425 L 25 445" />
+    <path d="M 1165 435 L 1185 435 M 1175 425 L 1175 445" />
+  </g>
+
+  <!-- Title Blueprint Header -->
+  <g transform="translate(60, 65)">
+    <rect x="0" y="-14" width="230" height="22" fill="#0284C7" />
+    <text x="10" y="2" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="900" fill="#FFFFFF" letter-spacing="1.5">
+      BLUEPRINT SPECIFICATION: 0x42
+    </text>
+    <text x="245" y="2" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#BAE6FD" letter-spacing="1">
+      TACTICAL ARCHITECTURE DIAGRAM // LIGHT-MODE SYNCHRONIZATION
+    </text>
+
+    <!-- Main Name -->
+    <text x="0" y="65" font-family="'Inter', sans-serif" font-size="54" font-weight="900" fill="#FFFFFF" letter-spacing="2">
+      SEMANTIC SUMIT
+    </text>
+
+    <text x="2" y="105" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700" fill="#38BDF8">
+      SYSTEM ARCHITECT: VOICE AI &amp; AUTONOMOUS COGNITIVE AGENTS
+    </text>
+
+    <text x="2" y="130" font-family="'JetBrains Mono', monospace" font-size="12" fill="#BAE6FD">
+      Engineering sub-100ms real-time audio pipelines and self-healing multi-agent swarms.
+    </text>
+  </g>
+
+  <!-- Technical Schematic Callouts Box -->
+  <g transform="translate(60, 240)">
+    <rect width="640" height="165" fill="#08253D" stroke="#38BDF8" stroke-width="1" />
+    <rect width="640" height="24" fill="#0284C7" />
+    <text x="14" y="16" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="800" fill="#FFFFFF">
+      SPECIFICATION SHEET // TOLERANCES &amp; CAPACITIES
+    </text>
+
+    <g transform="translate(20, 48)" font-family="'JetBrains Mono', monospace" font-size="11" fill="#BAE6FD">
+      <text y="0"><tspan font-weight="700" fill="#FFFFFF">01. AUDIO PIPELINE LATENCY :</tspan> &lt; 98ms (End-to-End Glass-to-Glass)</text>
+      <text y="24"><tspan font-weight="700" fill="#FFFFFF">02. STREAMING TTS ENGINE   :</tspan> Maya-1 / Apple Silicon MPS + CUDA Serverless</text>
+      <text y="48"><tspan font-weight="700" fill="#FFFFFF">03. AGENT ORCHESTRATION   :</tspan> Autonomous Swarms, Persistent Vector Memory</text>
+      <text y="72"><tspan font-weight="700" fill="#FFFFFF">04. RUNTIME INFRASTRUCTURE:</tspan> FastAPI + WebRTC + Dockerized Micro-Engines</text>
+      <text y="96"><tspan font-weight="700" fill="#38BDF8">05. TACTICAL DIRECTIVE    :</tspan> If it works on my machine, it works in production.</text>
+    </g>
+  </g>
+
+  <!-- Right Side Architectural Compass / Target -->
+  <g transform="translate(950, 240)">
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#38BDF8" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="75" fill="none" stroke="#0284C7" stroke-width="1" stroke-dasharray="8,4" />
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#BAE6FD" stroke-width="1.2" />
+    <circle cx="0" cy="0" r="4" fill="#38BDF8" />
+    <line x1="-115" y1="0" x2="115" y2="0" stroke="#38BDF8" stroke-width="1" />
+    <line x1="0" y1="-115" x2="0" y2="115" stroke="#38BDF8" stroke-width="1" />
+    <!-- Compass Markings -->
+    <text x="0" y="-120" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#BAE6FD">N // REASONING</text>
+    <text x="130" y="4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#BAE6FD">VOICE</text>
+    <text x="0" y="132" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#BAE6FD">INFRA</text>
+    <text x="-165" y="4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#BAE6FD">AGENTS</text>
+  </g>
+
+  <!-- Bottom Blueprint Stamp -->
+  <g transform="translate(820, 370)">
+    <rect width="280" height="50" fill="#041B2D" stroke="#38BDF8" stroke-width="1.2" />
+    <text x="14" y="20" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="800" fill="#38BDF8">APPROVED BY: SUMIT</text>
+    <text x="14" y="38" font-family="'JetBrains Mono', monospace" font-size="9" fill="#BAE6FD">STATUS: CERTIFIED IMPOSSIBLE</text>
+  </g>
+</svg>

@@ -1,0 +1,284 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="100%" height="auto" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-01" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040209" />
+      <stop offset="35%" stop-color="#090516" />
+      <stop offset="70%" stop-color="#120726" />
+      <stop offset="100%" stop-color="#030207" />
+    </linearGradient>
+
+    <!-- Neon Gradients -->
+    <linearGradient id="neon-synth-01" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="35%" stop-color="#38BDF8" />
+      <stop offset="70%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#EC4899" />
+    </linearGradient>
+
+    <linearGradient id="laser-slice-01" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0" />
+      <stop offset="25%" stop-color="#00F0FF" stop-opacity="0.9" />
+      <stop offset="75%" stop-color="#EC4899" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Filters for Glow -->
+    <filter id="hyper-glow-01" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur2" />
+      <feGaussianBlur stdDeviation="2" result="blur1" />
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <pattern id="grid-01" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#251242" stroke-width="0.7" stroke-opacity="0.4" />
+      <circle cx="30" cy="30" r="0.8" fill="#A855F7" opacity="0.6" />
+    </pattern>
+
+    <pattern id="scan-crt-01" width="100%" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="#000000" stroke-width="1.6" stroke-opacity="0.4" />
+    </pattern>
+
+    <style>
+      @keyframes rainDrop1 { 0% { transform: translateY(-300px); opacity: 0; } 10% { opacity: 0.8; } 90% { opacity: 0.8; } 100% { transform: translateY(500px); opacity: 0; } }
+      @keyframes rainDrop2 { 0% { transform: translateY(-400px); opacity: 0; } 15% { opacity: 0.9; } 85% { opacity: 0.9; } 100% { transform: translateY(500px); opacity: 0; } }
+      @keyframes rainDrop3 { 0% { transform: translateY(-250px); opacity: 0; } 20% { opacity: 0.7; } 80% { opacity: 0.7; } 100% { transform: translateY(500px); opacity: 0; } }
+
+      @keyframes glitchAnim {
+        0%, 100% { transform: translate(0); }
+        20% { transform: translate(-2px, 2px); }
+        40% { transform: translate(-1px, -1px); }
+        60% { transform: translate(2px, 1px); }
+        80% { transform: translate(1px, -2px); }
+      }
+      @keyframes chromaticRed {
+        0%, 100% { transform: translate(0); opacity: 0; }
+        92% { transform: translate(0); opacity: 0; }
+        93% { transform: translate(-3px, 1px); opacity: 0.7; }
+        95% { transform: translate(3px, -1px); opacity: 0.7; }
+        96% { transform: translate(0); opacity: 0; }
+      }
+      @keyframes chromaticCyan {
+        0%, 100% { transform: translate(0); opacity: 0; }
+        92% { transform: translate(0); opacity: 0; }
+        93% { transform: translate(3px, -1px); opacity: 0.8; }
+        95% { transform: translate(-3px, 1px); opacity: 0.8; }
+        96% { transform: translate(0); opacity: 0; }
+      }
+
+      @keyframes rotateSphere { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      @keyframes rotateSphereRev { 0% { transform: rotate(0deg); } 100% { transform: rotate(-360deg); } }
+      @keyframes radarSweep { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      @keyframes scanBeam { 0% { transform: translateY(-30px); opacity: 0; } 10% { opacity: 0.7; } 90% { opacity: 0.7; } 100% { transform: translateY(480px); opacity: 0; } }
+
+      @keyframes lineFade1 { 0%, 5% { opacity: 0; } 12%, 100% { opacity: 1; } }
+      @keyframes lineFade2 { 0%, 25% { opacity: 0; } 32%, 100% { opacity: 1; } }
+      @keyframes lineFade3 { 0%, 50% { opacity: 0; } 57%, 100% { opacity: 1; } }
+      @keyframes lineFade4 { 0%, 75% { opacity: 0; } 82%, 100% { opacity: 1; } }
+      @keyframes blinkCursor { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+
+      .m-col-1 { animation: rainDrop1 4.5s linear infinite; }
+      .m-col-2 { animation: rainDrop2 6s linear infinite 1.2s; }
+      .m-col-3 { animation: rainDrop3 5s linear infinite 0.7s; }
+      .m-col-4 { animation: rainDrop1 7s linear infinite 2.5s; }
+      .m-col-5 { animation: rainDrop2 5.5s linear infinite 1.8s; }
+
+      .glitch-main { animation: glitchAnim 4s infinite; }
+      .chroma-red { animation: chromaticRed 3.5s infinite; }
+      .chroma-cyan { animation: chromaticCyan 3.5s infinite; }
+
+      .wire-sphere { transform-origin: 1060px 115px; animation: rotateSphere 14s linear infinite; }
+      .wire-sphere-rev { transform-origin: 1060px 115px; animation: rotateSphereRev 22s linear infinite; }
+      .radar-arm { transform-origin: 1060px 115px; animation: radarSweep 3.8s linear infinite; }
+      .scanline-beam { animation: scanBeam 6s ease-in-out infinite; }
+      .cursor-blink { animation: blinkCursor 0.8s infinite; }
+    </style>
+  </defs>
+
+  <!-- Canvas Box -->
+  <rect width="1200" height="460" rx="14" fill="url(#bg-01)" stroke="#2B144E" stroke-width="1.8" />
+  <rect width="1200" height="460" rx="14" fill="url(#grid-01)" />
+
+  <!-- Matrix Digital Rain -->
+  <g font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#39FF14" opacity="0.32">
+    <g class="m-col-1" transform="translate(45, 0)"><text y="0">010101</text><text y="14">AI_CORE</text><text y="28">110010</text><text y="42">MAYA-1</text><text y="56">011011</text><text y="70">VOICE</text><text y="84">101001</text><text y="98">98ms</text></g>
+    <g class="m-col-2" transform="translate(180, 0)"><text y="0">FASTAPI</text><text y="14">001101</text><text y="28">WEBRTC</text><text y="42">111000</text><text y="56">SWARM</text><text y="70">010110</text><text y="84">LIVEKIT</text></g>
+    <g class="m-col-3" transform="translate(440, 0)"><text y="0">101101</text><text y="14">DOCKER</text><text y="28">010011</text><text y="42">NEURAL</text><text y="56">110110</text><text y="70">LATENCY</text></g>
+    <g class="m-col-4" transform="translate(680, 0)"><text y="0">011010</text><text y="14">REASON</text><text y="28">100101</text><text y="42">PYTHON</text><text y="56">001011</text><text y="70">CUDA</text></g>
+    <g class="m-col-5" transform="translate(860, 0)"><text y="0">110100</text><text y="14">UNREAL</text><text y="28">011011</text><text y="42">SYNTH</text><text y="56">100110</text><text y="70">ROOT</text></g>
+  </g>
+
+  <!-- Laser Horizon -->
+  <line x1="40" y1="50" x2="1160" y2="50" stroke="url(#laser-slice-01)" stroke-width="1.5" />
+
+  <!-- TOP SYSTEM HUD BAR -->
+  <g transform="translate(50, 32)">
+    <circle cx="0" cy="0" r="4.5" fill="#EF4444" />
+    <circle cx="16" cy="0" r="4.5" fill="#F59E0B" />
+    <circle cx="32" cy="0" r="4.5" fill="#10B981" />
+    <text x="56" y="4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800" fill="#00F0FF" letter-spacing="1.5">
+      SEMANTIC_CYBERDECK // NEURAL_OS v5.2-OVERCLOCKED
+    </text>
+    <text x="450" y="4" font-family="'JetBrains Mono', monospace" font-size="10" fill="#A855F7" letter-spacing="1">
+      [STREAMING_ENGINE: MAYA-1]
+    </text>
+    <text x="690" y="4" font-family="'JetBrains Mono', monospace" font-size="10" fill="#39FF14" letter-spacing="1">
+      ● 98ms GLASS-TO-GLASS
+    </text>
+    <text x="900" y="4" font-family="'JetBrains Mono', monospace" font-size="10" fill="#E2E8F0" letter-spacing="1">
+      LOC: 28.61°N / 77.20°E // INDIA
+    </text>
+  </g>
+
+  <!-- HUD Corner Brackets -->
+  <g stroke="#00F0FF" stroke-width="2" fill="none" opacity="0.9">
+    <path d="M 22 42 L 22 22 L 42 22" />
+    <path d="M 1178 42 L 1178 22 L 1158 22" />
+    <path d="M 22 418 L 22 438 L 42 438" />
+    <path d="M 1178 418 L 1178 438 L 1158 438" />
+  </g>
+
+  <!-- Title Area -->
+  <g transform="translate(60, 95)">
+    <g transform="translate(0, 16)">
+      <rect x="0" y="-12" width="168" height="22" rx="4" fill="#14092A" stroke="#7928CA" stroke-width="1.2" />
+      <circle cx="12" cy="-1" r="3" fill="#39FF14" />
+      <text x="22" y="3" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" fill="#39FF14" letter-spacing="1">
+        OPERATOR: SUMIT
+      </text>
+      <text x="180" y="3" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94A3B8" letter-spacing="1.5">
+        // SPECIALIZATION: REAL-TIME STREAMING VOICE AI &amp; MULTI-AGENT SWARMS
+      </text>
+    </g>
+
+    <!-- Master Glitch Title -->
+    <g transform="translate(0, 76)">
+      <text x="0" y="0" font-family="'Inter', -apple-system, sans-serif" font-size="58" font-weight="900" fill="#EC4899" letter-spacing="3" class="chroma-red">
+        SEMANTIC SUMIT
+      </text>
+      <text x="0" y="0" font-family="'Inter', -apple-system, sans-serif" font-size="58" font-weight="900" fill="#00F0FF" letter-spacing="3" class="chroma-cyan">
+        SEMANTIC SUMIT
+      </text>
+      <text x="0" y="0" font-family="'Inter', -apple-system, sans-serif" font-size="58" font-weight="900" fill="url(#neon-synth-01)" filter="url(#hyper-glow-01)" letter-spacing="3" class="glitch-main">
+        SEMANTIC SUMIT
+      </text>
+    </g>
+
+    <g transform="translate(2, 114)">
+      <text font-family="'JetBrains Mono', monospace" font-size="15" font-weight="700" fill="#F8FAFC" letter-spacing="1">
+        TAKING IMPOSSIBLE IDEAS AND MAKING THEM SHIP BEFORE MORNING.
+      </text>
+    </g>
+    <g transform="translate(2, 138)">
+      <text font-family="'JetBrains Mono', monospace" font-size="12" fill="#94A3B8" letter-spacing="0.8">
+        Real-Time Voice Streaming (TTS/STT) · Sub-100ms WebRTC Pipelines · Autonomous Agent Architectures
+      </text>
+    </g>
+
+    <!-- Telemetry Tag Badges Inside Banner -->
+    <g transform="translate(2, 162)">
+      <rect x="0" y="0" width="160" height="26" rx="5" fill="#0E0822" stroke="#00F0FF" stroke-width="1.2" />
+      <text x="12" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#00F0FF">🎙️ VOICE_AI: S-TIER</text>
+
+      <rect x="172" y="0" width="168" height="26" rx="5" fill="#0E0822" stroke="#39FF14" stroke-width="1.2" />
+      <text x="184" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#39FF14">⚡ LATENCY: &lt; 98ms</text>
+
+      <rect x="352" y="0" width="180" height="26" rx="5" fill="#0E0822" stroke="#A855F7" stroke-width="1.2" />
+      <text x="364" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#D8B4FE">🧠 AGENTS: SWARM</text>
+
+      <rect x="544" y="0" width="160" height="26" rx="5" fill="#0E0822" stroke="#EC4899" stroke-width="1.2" />
+      <text x="556" y="17" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#F472B6">🚀 SHIPPED: PROD</text>
+    </g>
+  </g>
+
+  <!-- Live Typing Terminal -->
+  <g transform="translate(60, 298)">
+    <rect width="670" height="135" rx="8" fill="#070512" stroke="#2D1A4E" stroke-width="1.4" />
+    <rect width="670" height="26" rx="8" fill="#130B26" />
+    <path d="M 0 20 L 0 26 L 670 26 L 670 20 Z" fill="#130B26" />
+    <circle cx="16" cy="13" r="3.5" fill="#EF4444" />
+    <circle cx="28" cy="13" r="3.5" fill="#F59E0B" />
+    <circle cx="40" cy="13" r="3.5" fill="#10B981" />
+    <text x="58" y="17" font-family="'JetBrains Mono', monospace" font-size="10.5" fill="#71717A">root@sumit-neural-cortex: ~ /usr/local/bin</text>
+
+    <g transform="translate(18, 48)" font-family="'JetBrains Mono', monospace" font-size="11.5">
+      <g style="animation: lineFade1 8s infinite;">
+        <text x="0" y="0" fill="#39FF14" font-weight="700">sumit@cortex:~$</text>
+        <text x="140" y="0" fill="#F8FAFC">./stream_voice_orchestrator --engine=maya-1 --latency=ultra_low</text>
+      </g>
+      <g style="animation: lineFade2 8s infinite;" transform="translate(0, 20)">
+        <text x="0" y="0" fill="#00F0FF">[AUDIO_STREAM]</text>
+        <text x="110" y="0" fill="#94A3B8">WebRTC Opus channel locked (48kHz Stereo) · Zero-buffer stream ready</text>
+      </g>
+      <g style="animation: lineFade3 8s infinite;" transform="translate(0, 40)">
+        <text x="0" y="0" fill="#A855F7">[BENCHMARK]</text>
+        <text x="96" y="0" fill="#E2E8F0">STT: 32ms | LLM-TTFT: 38ms | Streaming-TTS: 16ms | Total: 86ms</text>
+      </g>
+      <g style="animation: lineFade4 8s infinite;" transform="translate(0, 60)">
+        <text x="0" y="0" fill="#39FF14">✓ AGENT STATUS:</text>
+        <text x="120" y="0" fill="#FACC15">"Don't just use the system. Break the system. Then build something wild."</text>
+        <rect x="630" y="-10" width="8" height="14" fill="#00F0FF" class="cursor-blink" />
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Side 3D Rotating Core -->
+  <g transform="translate(940, 80)">
+    <rect x="-80" y="-15" width="280" height="350" rx="10" fill="#080516" stroke="#2D1A4E" stroke-width="1.4" />
+    <text x="-65" y="6" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#00F0FF" letter-spacing="1.5">
+      QUANTUM_HUD // 3D_CORTEX
+    </text>
+    <line x1="-80" y1="16" x2="200" y2="16" stroke="#251642" stroke-width="1" />
+
+    <g transform="translate(60, 115)">
+      <circle cx="0" cy="0" r="88" fill="none" stroke="#22113A" stroke-width="1.2" />
+      <circle cx="0" cy="0" r="70" fill="none" stroke="#311752" stroke-width="1" stroke-dasharray="6,4" />
+      <circle cx="0" cy="0" r="50" fill="none" stroke="#00F0FF" stroke-width="0.8" opacity="0.3" />
+
+      <g class="wire-sphere">
+        <ellipse cx="0" cy="0" rx="78" ry="28" fill="none" stroke="#00F0FF" stroke-width="1.5" stroke-dasharray="30, 20, 15, 10" filter="url(#hyper-glow-01)" />
+        <ellipse cx="0" cy="0" rx="28" ry="78" fill="none" stroke="#A855F7" stroke-width="1.2" stroke-dasharray="20, 15" />
+      </g>
+      <g class="wire-sphere-rev">
+        <ellipse cx="0" cy="0" rx="72" ry="45" fill="none" stroke="#EC4899" stroke-width="1.4" stroke-dasharray="10, 25, 30, 10" />
+      </g>
+
+      <g class="radar-arm">
+        <line x1="0" y1="0" x2="0" y2="-88" stroke="#00F0FF" stroke-width="2" filter="url(#hyper-glow-01)" />
+        <path d="M 0 0 L 32 -82 A 88 88 0 0 0 0 -88 Z" fill="#00F0FF" opacity="0.2" />
+      </g>
+
+      <circle cx="0" cy="0" r="8" fill="#00F0FF" filter="url(#hyper-glow-01)" />
+      <circle cx="0" cy="0" r="3" fill="#FFFFFF" />
+
+      <circle cx="45" cy="-35" r="3" fill="#39FF14" />
+      <circle cx="-50" cy="40" r="2.5" fill="#EC4899" />
+      <circle cx="20" cy="60" r="2.5" fill="#00F0FF" />
+    </g>
+
+    <g transform="translate(-65, 235)" font-family="'JetBrains Mono', monospace" font-size="10.5">
+      <text x="0" y="0" fill="#94A3B8">CORE_OVERCLOCK:</text>
+      <text x="135" y="0" fill="#39FF14" font-weight="700">99.8% (PEAK)</text>
+
+      <text x="0" y="18" fill="#94A3B8">STREAM_LATENCY:</text>
+      <text x="135" y="18" fill="#00F0FF" font-weight="700">&lt; 86 ms</text>
+
+      <text x="0" y="36" fill="#94A3B8">COGNITIVE_AGENTS:</text>
+      <text x="135" y="36" fill="#A855F7" font-weight="700">SYNCHRONIZED</text>
+
+      <text x="0" y="54" fill="#94A3B8">COFFEE_RESERVE:</text>
+      <text x="135" y="54" fill="#F59E0B" font-weight="700">100% RECHARGED</text>
+
+      <text x="0" y="72" fill="#94A3B8">SANITY_FILTERS:</text>
+      <text x="135" y="72" fill="#EF4444" font-weight="700">BYPASSED [ROOT]</text>
+    </g>
+  </g>
+
+  <!-- CRT Scanline Screen Overlay -->
+  <rect width="1200" height="460" fill="url(#scan-crt-01)" pointer-events="none" opacity="0.65" />
+  <rect width="1200" height="35" fill="url(#laser-slice-01)" opacity="0.18" class="scanline-beam" pointer-events="none" />
+</svg>
